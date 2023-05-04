@@ -30,21 +30,21 @@ header {
 }
 
 body {
-  background-color: rgb(5, 5, 5);
+  background-color: rgb(0, 0, 0);
 }
 
 /*CONTENEDOR PRINCIPAL pag1*/ 
 .container{
   display: flex;
   position: relative;
-  /*justify-content: space-around; /*CAMBIE ESTO - PL*/ 
-  justify-content: center; /*CAMBIE ESTO - PL*/ 
+  justify-content: center; 
   align-items: flex-end;
 }
 
 /*Estilo imagen principal*/ 
 .imagenP1rm{
-  left: 0px;
+  left: 20px;
+  top: 20px;
   position: relative;
   margin: 55px;
 }
@@ -61,6 +61,7 @@ body {
     position:relative;
     flex-direction: column;
     left: 0px;
+    top: -100px;
     flex-wrap: wrap;
     justify-content: space-evenly; /*pone espacio entre los div*/ 
 }
@@ -68,24 +69,32 @@ body {
   /*Estilo para imagen nombre*/ 
 .imagenP2rm{
     top: 0px;
-    bottom: 0;
+    bottom: 0px;
     right: 0px;
-    left: 0px;
+    left: 70px;
     position: relative;
     margin: 0px;
 }
 
 .nombrerm{
-    width: 500px;
-    height: 200px;
+    width: 700px;
+    height: 300px;
 }
 
 .buscador{
     position: relative;
+    top: 0px;
     font-family: 'Courier New', Courier, monospace;
     color:rgb(254, 254, 255);
     right: -160px;
-   /*bottom: 100px;*/
+}
+
+.buscador2{
+  top: 0px;
+  font-family: 'Courier New', Courier, monospace;
+  color:rgb(254, 254, 255);
+  max-width:fit-content;
+  margin: 0 auto;
 }
 
 input {
@@ -116,10 +125,23 @@ input {
   left: 120px;
   bottom: 50px;
   width: 200px;
+  top: -50px;
 }
 
+.botonGrande:hover{
+  padding: 5px 12px; 
+  background: #1EB9EA; 
+  color: rgb(0, 0, 0); 
+}
+
+.botonGrande:active{
+  padding: 5px 12px; 
+  background: #0e7595; 
+  color: rgb(0, 0, 0); 
+}
+
+
 .botonBuscar{
-  position: relative;
   background-color: rgb(8, 8, 8);
   color: #1EB9EA;
   font-size: x-small;
@@ -129,6 +151,18 @@ input {
   border-radius: 50px;
 }  
 
+.botonBuscar:hover{
+  padding: 5px 12px; 
+  background: #1EB9EA; 
+  color: rgb(0, 0, 0); 
+}
+
+.botonBuscar:active{
+  padding: 5px 12px; 
+  background: #0e7595; 
+  color: rgb(0, 0, 0); 
+}
+
 .frase{
     font-family:Georgia, 'Times New Roman', Times, serif;
     color: #7AE868;
@@ -137,47 +171,55 @@ input {
     letter-spacing: 2px;
 }
 
+
+/*SECCIÓN 2: TODOS*/
 .seccion2{
+  display: flex;
+  position: relative;
+}
+
+
+.tituloPersonajes{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  color: #7AE868;
+  font-size: x-large;
+  text-align: center;
+  letter-spacing: 2px;
+  max-width:fit-content;
+  margin: 0 auto;
+}
+
+
+/*EMPIEZA ESTILO DE LAS TARJETAS*/
+
+#personajes{ /*contendor de las tarjetas*/
+  display: flex;
+  justify-content: space-around;
+  align-content: space-around;
+  /*background-color: #ff0000;*/
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto; 
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.imagenTarjeta{
+  width: 200px;
+  height: 200px;
+  margin: 20px 50px 20px 50px;
+}
+
+.tarjetaP{ /* fondo tarjetas*/
+  background-color: #16cde1a2;
+  width: 300px;
+  height: 400px;
   color: aliceblue;
+  margin-top: 20px;
+  border-radius: 15px;
 }
 
-table.greyGridTable {
-  border: 2px solid #FFFFFF;
-  width: 100%;
-  text-align: center;
-  border-collapse: collapse;
-}
-table.greyGridTable td, table.greyGridTable th {
-  border: 1px solid #FFFFFF;
-  padding: 3px 4px;
-}
-table.greyGridTable tbody td {
-  font-size: 13px;
-}
-table.greyGridTable td:nth-child(even) {
-  background: #EBEBEB;
-}
-table.greyGridTable thead {
-  background: #FFFFFF;
-  border-bottom: 4px solid #7AE868;
-}
-table.greyGridTable thead th {
-  font-size: 15px;
-  font-weight: bold;
-  color: #FFFFFF;
-  text-align: center;
-  border-left: 2px solid #7AE868;
-}
-table.greyGridTable thead th:first-child {
-  border-left: none;
-}
-
-table.greyGridTable tfoot {
-  font-size: 14px;
-  font-weight: bold;
-  color: #FFFFFF;
-  border-top: 4px solid #333333;
-}
-table.greyGridTable tfoot td {
-  font-size: 14px;
+.textoTarjeta{
+  margin: 0px 0px 0px 10px;
+  font-weight: 0;
 }

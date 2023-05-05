@@ -17,9 +17,9 @@ const espacioPersonajes = document.getElementById("personajes");
 
 const filtrar = () => {
     resultado.innerHTML = '';
-    const texto = buscadorDos.value;
+    const texto = buscadorDos.value.toLowerCase();
     for (let personaje of data.results) {
-        let nombre = personaje.name;
+        let nombre = personaje.name.toLowerCase();
         if (nombre.indexOf(texto) !== -1){
             resultado.innerHTML += ` 
             <div class="tarjetaP">${'<img class="imagenTarjeta" src="' + personaje.image + '">' + '<br>' + '<p class="textoTarjeta">' + personaje.name + '<br>' + "Estatus: " + personaje.status + '<br>' + "Especie: " + personaje.species + '<br>' + "Tipo: " + personaje.type + '<br>' + "Genero: " + personaje.gender + '<br>' + "Origen: " + personaje.origin.name + '<br>' + "Locación: " + personaje.location.name + '</p>'}</div>

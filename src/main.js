@@ -30,7 +30,8 @@ botonInicio.addEventListener("click", ()=> {
 
 function cerrarSeccion2(){
     seccion2.style.display = 'none';
-    seccion1.style.display = 'block'; 
+    seccion1.style.display = 'flex'; 
+
 }
 
 //MOSTRAR TODOS LO PERSONAJES SIN FILTRO 

@@ -37,7 +37,7 @@ const filtrar = () => {
 
 export {filtrar};
 
-
+console.log("pequeñocambio");
 
 
 

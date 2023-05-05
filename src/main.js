@@ -46,7 +46,7 @@ function mostrarTodo(){
 const botonBuscador = document.getElementById("botonBuscador");
 botonBuscador.addEventListener("click", filtrar)
 
-
+console.log("commitPrueba2");
 
 
 

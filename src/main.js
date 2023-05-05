@@ -1,8 +1,8 @@
 import data from './data/rickandmorty/rickandmorty.js';
 console.log(data.results);
-import {filtrarNombres} from './data.js';
+import {filtrar} from './data.js';
 
-console.log(filtrarNombres);
+
 
 //AQUÍ EMPIEZA NUESTRO CÓDIGO
 const seccion1 = document.getElementById("container");
@@ -37,13 +37,25 @@ function cerrarSeccion2(){
 function mostrarTodo(){
     for (let todos of data.results){
         console.log(todos);
-        espacioPersonajes.innerHTML += '<div class="tarjetaP">' + '<img class="imagenTarjeta" src="' + todos.image + '">' + '<br>' + '<p class="textoTarjeta">' + "Nombre: " + todos.name + '<br>'  + "Estatus: " + todos.status + '<br>' + "Especie: " + todos.species + '<br>' + "Tipo: " + todos.type + '<br>' + "Genero: " + todos.gender + '<br>' + "Origen: " + todos.origin.name + '<br>' + "Locación: " + todos.location.name + '</p>' + '</div>';
+        espacioPersonajes.innerHTML += '<div class="tarjetaP" id="tarjetaP">' + '<img class="imagenTarjeta" src="' + todos.image + '">' + '<br>' + '<p class="textoTarjeta">' + "Nombre: " + todos.name + '<br>'  + "Estatus: " + todos.status + '<br>' + "Especie: " + todos.species + '<br>' + "Tipo: " + todos.type + '<br>' + "Genero: " + todos.gender + '<br>' + "Origen: " + todos.origin.name + '<br>' + "Locación: " + todos.location.name + '</p>' + '</div>';
     }
 }
 
 
+const botonBuscador = document.getElementById("botonBuscador");
+botonBuscador.addEventListener("click", filtrar)
 
 
+
+
+
+
+//ESTO ES DEL BUSCADOR INTENTO 1
+//let buscadorDos = document.getElementById("buscadorDos");
+//let tarjetaP = document.getElementById("tarjetaP");
+
+//buscadorFiltro(buscadorDos, tarjetaP); 
+//ESTO ES DEL BUSCADOR INTENTO 1
 
 
 

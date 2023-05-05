@@ -223,3 +223,15 @@ input {
   margin: 0px 0px 0px 10px;
   font-weight: 0;
 }
+
+.resultado{
+  display: flex;
+  justify-content: space-around;
+  align-content: space-around;
+  /*background-color: #ff0000;*/
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto; 
+  margin-top: 10px;
+  margin-bottom: 50px;
+}

@@ -52,8 +52,7 @@ const filtrar = () => {
 }
 
 //FILTRO DE LETRAS
-
-let isalfabeto = (orden) => {
+let isalfabeto = (orden, upward) => {
 let dataAlfabeto = data.results.slice();
 dataAlfabeto.sort((a,b) =>{
 const nombreA = a.name.toLowerCase();
@@ -64,16 +63,24 @@ if(nombreA<nombreB){
 }
 if(nombreA>nombreB){
   return 1
-} else {
-  const inverso = dataAlfabeto.reverse();
-  console.log(inverso);
 }
-return dataAlfabeto;
 })
+/*if(upward === "A-Z"){
+return dataAlfabeto;
+}
+if(upward === "Z-A") {
+  const reversa = dataAlfabeto.reverse();
+  return dataAlfabeto;
+}
+return dataAlfabeto;*/
+return dataAlfabeto
 }
 
 
-export {filtrar1, filtrar, isalfabeto};
+
+
+
+
 
 
 //FILTRA POR MULTIVERSOS
@@ -89,7 +96,7 @@ mostrarMultiversos();
 
 
 
-
+export {filtrar1, filtrar, isalfabeto, mostrarMultiversos};
 
 
 

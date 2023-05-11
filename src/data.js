@@ -68,8 +68,8 @@ if(nombreA>nombreB){
   const inverso = dataAlfabeto.reverse();
   console.log(inverso);
 }
-return dataAlfabeto;
 })
+return dataAlfabeto;
 }
 
 

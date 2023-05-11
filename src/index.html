@@ -5,19 +5,17 @@
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-
-  <header>
-    <img class="logorm" src="./imagenes/logorm.png" alt="Logo Rick and Morty">
-  </header>
-
+  
   <body>
 
+    <header class="header1" id="header1">
+      <img class="logorm" src="./imagenes/logorm.png" alt="Logo Rick and Morty">
+    </header>
+
     <section class="container" id="container"> <!--1.CONTENEDOR PRINCIPAL-->
-    
     <div class="imagenP1rm"> <!--1.1IMAGEN DE PORTADA-->
       <img class="portadarm" src="./imagenes/portadarm.png" alt="Imagen Rick and Morty">
     </div>
-    
     <div class="infoportada"> <!--1.2EMPIEZA SECCIÓN CON TODOS LOS ELEMENTOS DE INICIO-->
       <div class="imagenP2rm"> <!--1.2.1-->
         <img class="nombrerm" src="./imagenes/nombrerm.png" alt="Nombre Rick and Morty">
@@ -25,8 +23,8 @@
       <div class="buscador"> <!--1.2.2-->
         <label>Busca tus personajes</label>
         <br>
-        <input type="search" placeholder="Buscar" id="buscador">
-        <button class="botonBuscar">VAMOS</button>
+        <input type="search" placeholder="Buscar" id="buscador1">
+        <button id="botonBuscar" class="botonBuscar">VAMOS</button>
       </div>
       <div class="botones"> <!--1.2.3-->
         <button class="botonGrande" id="botonMultiversos">MULTIVERSOS</button>
@@ -39,35 +37,84 @@
     </section>
 
     <!--2.SECCIÓN DOS-->
+    <header class="header2" id="header2">
+      <img class="logorm2" src="./imagenes/nombrerm.png" alt="Logo Rick and Morty">
+    </header>
+
+
     <section id="seccion2">
       <div class="tituloPersonajes" >
         <br>
         <br>
         <br>
         <h1>PERSONAJES</h1><br>
-        <h3>Más de 400 personajes que ni siquiera recordabas</h3>
+        <h3>Más de 99 personajes que ni siquiera recordabas</h3>
         <br>
       </div>
-    
+
+
+      <!--SECCIÓN BUSCADOR PAG2-->
       <div class="buscador2">
+        <!--SELECTOR POR LETRAS PARA FILTRO A-Z-->
+        <label>Ordenar</label> 
+        <select name="por letra" id="selector1">
+          <option disabled selected>A-Z</option>
+          <option value="desendente">A-Z</option>
+          <option value="ascendente">Z-A</option>
+        </select>
         <input type="search" placeholder="Busca tu personaje" id="buscadorDos">
         <button class="botonBuscar" id="botonBuscador">BUSCAR</button>
         <button class="botonBuscar" id="botonInicio">INICIO</button> <br>
         <div id="resultado" class="resultado">
-
-        </div>
       </div>
+    
       
-    <!--EMPIEZA NUESTRA DATA-->
-
-    <div id="personajes" class="wrapper">
 
     </div>
-  </div>    
+    <!--EMPIEZA NUESTRA DATA-->
+    <div id="personajes" class="wrapper">
+    </div>
+  </div>
+</section>
 
+      <!--3.SECCIÓN TRES-->
+      <section id="seccion3">
+        <div class="multiversos" >
+          <br>
+          <br>
+          <br>
+          <h1>MULTIVERSOS</h1><br>
+          <h3>Los multiversos son infinitos, pero aquí encontrarás los que más veces se han presentado en la serie</h3>
+          <br>
+          <button class="botonBuscar" id="botonInicio2">INICIO</button> <br>
+        </div>
 
-
+        <div class="botonesmultiverso" id="botonesmultiverso">
+          <botton class="botonorigen">Anatomy Park</botton>
+          <botton class="botonorigen">Cronenberg Earth</botton>
+          <botton class="botonorigen">Earth (C-137)</botton>
+          <botton class="botonorigen">Abadango</botton>
+          <botton class="botonorigen">Bepis 9</botton>
+          <botton class="botonorigen">Bird World</botton>
+          <botton class="botonorigen">Earth (C-500A)</botton>
+          <botton class="botonorigen">Earth (Evil Rick's Target Dimension)</botton>
+          <botton class="botonorigen">Earth (K-83)</botton>
+          <botton class="botonorigen">Fantasy World</botton>
+          <botton class="botonorigen">Giant's Town</botton>
+          <botton class="botonorigen">Gromflom Prime</botton>
+          <botton class="botonorigen">Hideout Planet</botton>
+          <botton class="botonorigen">Nuptia 4</botton>
+          <botton class="botonorigen">Post-Apocalyptic Earth</botton>
+          <botton class="botonorigen">Purge Planet</botton>
+          <botton class="botonorigen">Rick's Battery Microverse</botton>
+          <botton class="botonorigen">Signus 5 Expanse</botton>
+          <botton class="botonorigen">The Menagerie</botton>
+          <botton class="botonorigen">Unity's Planet</botton>
+          <botton class="botonorigen">Venzenulon 7</botton>
+          <botton class="botonorigen">Unknown</botton>
+        </div>
     </section>
+
 
     <div id="root"></div>
     <script src="main.js" type="module"></script>

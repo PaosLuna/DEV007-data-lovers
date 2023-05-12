@@ -5,6 +5,18 @@
   transition: all 0.25s;
 }
 
+body {
+  background-color: #7ae868;
+  background-image: url("imagenes/fondoRM.png");
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-attachment: fixed;
+  background-position: 50% 75%;
+  margin: 0px;
+}
+
+
 /*Estilo para header*/
 .header1 {
   background-color: #7ae868;
@@ -28,7 +40,7 @@
   left: 600px;
 }
 
-.header2 {
+/*.header2 {
   display: flex;
   background-color: #000000;
   border-color: #000000;
@@ -38,27 +50,19 @@
   justify-content: flex-end;
   align-items: center;
   position: static;
-}
+}*/
 
 .logorm2 {
   position: relative;
-  width: 100px;
-  height: 37px;
+  width: 150px;
+  height: 80px;
   top: 5px;
   bottom: 0;
   right: 0px;
-  left: 1350px;
+  left: 50px;
 }
 
-body {
-  background-color: #7ae868;
-  background-image: url("imagenes/fondoRM.png");
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size:auto;
-  background-attachment: fixed;
-  background-position: center;
-}
+
 
 /*CONTENEDOR PRINCIPAL pag1*/
 .container {
@@ -78,8 +82,8 @@ body {
 }
 
 .portadarm {
-  width: 500px;
-  height: 600px;
+  width: 530px;
+  height: 630px;
 }
 
 /*Estilo hacer flexbox columna de datos*/
@@ -88,21 +92,20 @@ body {
   position: relative;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: center;
+  /*justify-content: center;*/
   margin-top: 0px;
 }
 
 /*Estilo para imagen nombre*/
 .imagenP2rm {
   position: relative;
-
   max-width: fit-content;
   max-height: fit-content;
 }
 
 .nombrerm {
   width: 700px;
-  height: 300px;
+  height: 250px;
 }
 
 .buscador {
@@ -216,8 +219,9 @@ input {
   color: #000000;
   font-size: xx-large;
   text-align: center;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   align-items: center;
+  padding: 40px;
 }
 
 /*EMPIEZA ESTILO DE LAS TARJETAS*/
@@ -230,7 +234,7 @@ input {
   flex-wrap: wrap;
   width: 90%;
   margin: 0 auto;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 50px;
 }
 
@@ -278,9 +282,10 @@ input {
   color: #000000;
   font-size: X-large;
   text-align: center;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   max-width: fit-content;
   margin: 0 auto;
+  padding: 60px;
 }
 
 #botonesmultiverso {
@@ -309,4 +314,50 @@ input {
   padding: 5px 12px;
   background: #0E7595;
   color: rgb(0, 0, 0);
+}
+
+/*HEADER PRUEBA*/
+.headerPrueba{
+  background-color: #030303;
+  color: #7AE868;
+  padding: 1rem 2rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.contenedorheader{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation ul li{
+display: inline-block;
+padding: 0.5rem 2rem 0.5rem;
+border-radius: 5px;
+align-items: center;
+}
+
+.navigation ul li:hover{
+background: #79e86881;
+}
+
+.botonHeader{
+  background-color: transparent;
+  border: none;
+  color: #7AE868;
+  font-size: large;
+  font-weight: bold;
+}
+
+.botonHeader:hover{
+  color: white;
 }

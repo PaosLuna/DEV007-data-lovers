@@ -5,6 +5,8 @@
   <meta charset="utf-8">
   <title>Data Lovers</title>
   <link rel="stylesheet" href="style.css" />
+  <!--SE SUPONE QUE ESTO HACE QUE MUESTRE AL 100% SIN IMPORTAR EL NAVEGADOR-->
+  <meta name="viewport" content="widht=device-widht, initial-scale=1">
 </head>
 
 <body>
@@ -37,10 +39,35 @@
     </div>
   </section>
 
+
+
+
   <!--2.SECCIÓN DOS-->
+  <!--PRIMER HEADER
   <header class="header2" id="header2">
     <img class="logorm2" src="./imagenes/nombrerm.png" alt="Logo Rick and Morty">
+  </header>-->
+
+  <!--PRUEBA DE HEADER-->
+  <header class="headerPrueba" id="header2">
+    <div class="contenedorheader">
+    <!--<a href="#" class="logo">LOGO</a>-->
+    <img class="logorm2" src="./imagenes/logorm2.png" alt="Logo Rick and Morty">
+    <nav class="navigation">
+      <ul>
+        <li><button class="botonHeader" id="headerInicio">INICIO</button></li>
+        <li><button class="botonHeader" id="headerPersonajes">PERSONAJES</li>
+        <li><button class="botonHeader" id="headerEpisodios">EPISODIOS</li>
+        <li><button class="botonHeader" id="headerMultiversos">MULTIVERSOS</li>
+      </ul>
+    </nav>
+    </div>
   </header>
+<!--PRUEBA DE HEADER-->
+
+
+
+
 
 
   <section id="seccion2">
@@ -60,8 +87,8 @@
       <label>Ordenar</label>
       <select name="por letra" id="selector1">
         <option disabled selected>A-Z</option>
-        <option id="selectorAZ" value="descendente">A-Z</option>
-        <option id="selectorZA" value="ascendente">Z-A</option>
+        <option id="selectorAZ" value="ascendente">A-Z</option>
+        <option id="selectorZA" value="descendente">Z-A</option>
       </select>
       <input type="search" placeholder="Busca tu personaje" id="buscadorDos">
       <button class="botonBuscar" id="botonBuscador">BUSCAR</button>

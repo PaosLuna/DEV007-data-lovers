@@ -70,7 +70,7 @@ const botonMultiversos = document.getElementById("botonMultiversos");
 botonMultiversos.addEventListener("click", ()=> {
     abrirSeccion3();
     mostrarTodo();
-    mostrarFiltrado2();
+    //mostrarFiltrado2();
 });
 function abrirSeccion3(){
     seccion1.style.display = 'none';

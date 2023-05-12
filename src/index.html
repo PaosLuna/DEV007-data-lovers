@@ -51,19 +51,19 @@
   <!--PRUEBA DE HEADER-->
   <header class="headerPrueba" id="header2">
     <div class="contenedorheader">
-    <!--<a href="#" class="logo">LOGO</a>-->
-    <img class="logorm2" src="./imagenes/logorm2.png" alt="Logo Rick and Morty">
-    <nav class="navigation">
-      <ul>
-        <li><button class="botonHeader" id="headerInicio">INICIO</button></li>
-        <li><button class="botonHeader" id="headerPersonajes">PERSONAJES</li>
-        <li><button class="botonHeader" id="headerEpisodios">EPISODIOS</li>
-        <li><button class="botonHeader" id="headerMultiversos">MULTIVERSOS</li>
-      </ul>
-    </nav>
+      <!--<a href="#" class="logo">LOGO</a>-->
+      <img class="logorm2" src="./imagenes/logorm2.png" alt="Logo Rick and Morty">
+      <nav class="navigation">
+        <ul>
+          <li><button class="botonHeader" id="headerInicio">INICIO</button></li>
+          <li><button class="botonHeader" id="headerPersonajes">PERSONAJES</li>
+          <li><button class="botonHeader" id="headerEpisodios">EPISODIOS</li>
+          <li><button class="botonHeader" id="headerMultiversos">MULTIVERSOS</li>
+        </ul>
+      </nav>
     </div>
   </header>
-<!--PRUEBA DE HEADER-->
+  <!--PRUEBA DE HEADER-->
 
 
 
@@ -112,40 +112,257 @@
       <br>
       <h1>MULTIVERSOS</h1><br>
       <h3>Los multiversos son infinitos, pero aquí encontrarás los que más veces se han presentado en la serie</h3>
-      <br>
-      <button class="botonBuscar" id="botonInicio2">INICIO</button> <br>
     </div>
 
-    <div class="botonesmultiverso" id="botonesmultiverso">
-      <botton class="botonorigen">Anatomy Park</botton>
-      <botton class="botonorigen">Cronenberg Earth</botton>
-      <botton class="botonorigen">Earth (C-137)</botton>
-      <botton class="botonorigen">Abadango</botton>
-      <botton class="botonorigen">Bepis 9</botton>
-      <botton class="botonorigen">Bird World</botton>
-      <botton class="botonorigen">Earth (C-500A)</botton>
-      <botton class="botonorigen">Earth (Evil Rick's Target Dimension)</botton>
-      <botton class="botonorigen">Earth (K-83)</botton>
-      <botton class="botonorigen">Fantasy World</botton>
-      <botton class="botonorigen">Giant's Town</botton>
-      <botton class="botonorigen">Gromflom Prime</botton>
-      <botton class="botonorigen">Hideout Planet</botton>
-      <botton class="botonorigen">Nuptia 4</botton>
-      <botton class="botonorigen">Post-Apocalyptic Earth</botton>
-      <botton class="botonorigen">Purge Planet</botton>
-      <botton class="botonorigen">Rick's Battery Microverse</botton>
-      <botton class="botonorigen">Signus 5 Expanse</botton>
-      <botton class="botonorigen">The Menagerie</botton>
-      <botton class="botonorigen">Unity's Planet</botton>
-      <botton class="botonorigen">Venzenulon 7</botton>
-      <botton class="botonorigen">Unknown</botton>
+    <!--EMPIEZA CARRUSEL-->
+
+    <div class="carruselContenedor" id="carruselContenedor">
+
+      <div class="carruselImagenes" id="carruselImagenes">
+
+        <button class="carrusel-arrow carrusel-prev" id="button-prev" data-button="button-prev"
+          onclick="app.processingButton(event)">
+          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left"
+            class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 320 512">
+            <path fill="currentColor"
+              d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z">
+            </path>
+          </svg>
+        </button>
+
+        <div class="carrusel-track" id="carrusel-track">
+
+          <div class="carrusel" id="carrusel">
+
+            <div>
+              <a href="/">
+                <h4><small>IMAGEN</small> Mas </h4>
+                <picture>
+                  <img src="./imagenes/multiversostarjetas/Abadango.jpg" alt="Abadango">
+                </picture>
+              </a>
+            </div>
+
+
+            <div>
+              <a href="/">
+                <h4><small>IMAGEN</small> Mas </h4>
+                <picture>
+                  <img src="./imagenes/multiversostarjetas/Anatomy park.jpg" alt="Anatomy park">
+                </picture>
+              </a>
+            </div>
+
+
+            <div>
+              <a href="/">
+                <h4><small>IMAGEN</small> Mas </h4>
+                <picture>
+                  <img src="./imagenes/multiversostarjetas/Bepis 9.jpg" alt="Bepis 9">
+                </picture>
+              </a>
+            </div>
+
+
+            <div>
+              <a href="/">
+                <h4><small>IMAGEN</small> Mas </h4>
+                <picture>
+                  <img src="./imagenes/multiversostarjetas/Bird world.jpg" alt="Bird world">
+                </picture>
+              </a>
+            </div>
+
+
+            <div>
+              <a href="/">
+                <h4><small>IMAGEN</small> Mas </h4>
+                <picture>
+                  <img src="./imagenes/multiversostarjetas/Cronenber earth.jpg" alt="Cronenber earth">
+                </picture>
+              </a>
+            </div>
+
+            <div>
+              <a href="/">
+                <h4><small>IMAGEN</small> Mas </h4>
+                <picture>
+                  <img src="./imagenes/multiversostarjetas/Earth (C-137).jpg" alt="Earth (C-137)">
+                </picture>
+              </a>
+            </div>
+          
+
+            <div>
+              <a href="/">
+                <h4><small>IMAGEN</small> Mas </h4>
+                <picture>
+                  <img src="./imagenes/multiversostarjetas/Earth (C-500A).jpg" alt="Earth (C-500A)">
+                </picture>
+              </a>
+            </div>
+
+          
+
+            <div>
+              <a href="/">
+                <h4><small>IMAGEN</small> Mas </h4>
+                <picture>
+                  <img src="./imagenes/multiversostarjetas/Earth (Evil Rick's).jpg" alt="Earth (Evil Rick's)">
+                </picture>
+              </a>
+            </div>
+          
+            <div>
+              <a href="/">
+                <h4><small>IMAGEN</small> Mas </h4>
+                <picture>
+                  <img src="./imagenes/multiversostarjetas/Earth (K-83).jpg" alt="Earth (K-83)">
+                </picture>
+              </a>
+            </div>
+
+            <div>
+              <a href="/">
+                <h4><small>IMAGEN</small> Mas </h4>
+                <picture>
+                  <img src="./imagenes/multiversostarjetas/Fantasy world.jpg" alt="Fantasy world">
+                </picture>
+              </a>
+            </div>
+
+            <div>
+              <a href="/">
+                <h4><small>IMAGEN</small> Mas </h4>
+                <picture>
+                  <img src="./imagenes/multiversostarjetas/Giant's town.jpg" alt="Giant's town">
+                </picture>
+              </a>
+            </div>
+
+            <div>
+              <a href="/">
+                <h4><small>IMAGEN</small> Mas </h4>
+                <picture>
+                  <img src="./imagenes/multiversostarjetas/Gromflom prime.jpg" alt="Gromflom prime">
+                </picture>
+              </a>
+            </div>
+
+            <div>
+              <a href="/">
+                <h4><small>IMAGEN</small> Mas </h4>
+                <picture>
+                  <img src="./imagenes/multiversostarjetas/Hideout planet.jpg" alt="Hideout planet">
+                </picture>
+              </a>
+            </div>
+
+            <div>
+              <a href="/">
+                <h4><small>IMAGEN</small> Mas </h4>
+                <picture>
+                  <img src="./imagenes/multiversostarjetas/Nuptia 4.jpg" alt="Nuptia 4">
+                </picture>
+              </a>
+            </div>
+
+            <div>
+              <a href="/">
+                <h4><small>IMAGEN</small> Mas </h4>
+                <picture>
+                  <img src="./imagenes/multiversostarjetas/Post apocalyptic earth.jpg" alt="Post apocalyptic earth">
+                </picture>
+              </a>
+            </div>
+          
+            <div>
+              <a href="/">
+                <h4><small>IMAGEN</small> Mas </h4>
+                <picture>
+                  <img src="./imagenes/multiversostarjetas/Purge planet.jpg" alt="Purge planet">
+                </picture>
+              </a>
+            </div>
+
+            <div>
+              <a href="/">
+                <h4><small>IMAGEN</small> Mas </h4>
+                <picture>
+                  <img src="./imagenes/multiversostarjetas/Rick's battery microverse.jpg"
+                    alt="Rick's battery microverse">
+                </picture>
+              </a>
+            </div>
+
+            <div>
+              <a href="/">
+                <h4><small>IMAGEN</small> Mas </h4>
+                <picture>
+                  <img src="./imagenes/multiversostarjetas/Signus 5 expanse.jpg" alt="Signus 5 expanse">
+                </picture>
+              </a>
+            </div>
+
+            <div>
+              <a href="/">
+                <h4><small>IMAGEN</small> Mas </h4>
+                <picture>
+                  <img src="./imagenes/multiversostarjetas/The menagerie.jpg" alt="The menagerie">
+                </picture>
+              </a>
+            </div>
+
+            <div>
+              <a href="/">
+                <h4><small>IMAGEN</small> Mas </h4>
+                <picture>
+                  <img src="./imagenes/multiversostarjetas/Unitys planet.jpg" alt="Unitys planet">
+                </picture>
+              </a>
+            </div>
+
+            <div>
+              <a href="/">
+                <h4><small>IMAGEN</small> Mas </h4>
+                <picture>
+                  <img src="./imagenes/multiversostarjetas/Venzenulon 7.jpg" alt="Venzenulon 7">
+                </picture>
+              </a>
+            </div>
+          
+            <div>
+              <a href="/">
+                <h4><small>IMAGEN</small> Mas </h4>
+                <picture>
+                  <img src="./imagenes/multiversostarjetas/Unknown.jpg" alt="Unknown">
+                </picture>
+              </a>
+            </div>
+          
+          
+          </div>
+        </div>
+
+        <button class="carrusel-arrow carrusel-next" id="button-next" data-button="button-next"
+          onclick="app.processingButton(event)">
+          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right"
+            class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 320 512">
+            <path fill="currentColor"
+              d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z">
+            </path>
+          </svg>
+        </button>
+
+      </div>
     </div>
 
-   
     <div id="personajesMulti" class="wrapper">
-    
+
     </div>
-    
+
 
 
 

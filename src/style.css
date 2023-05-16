@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -40,18 +42,6 @@ body {
   left: 600px;
 }
 
-/*.header2 {
-  display: flex;
-  background-color: #000000;
-  border-color: #000000;
-  width: 100%;
-  height: 3rem;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  position: static;
-}*/
-
 .logorm2 {
   position: relative;
   width: 150px;
@@ -92,7 +82,6 @@ body {
   position: relative;
   flex-direction: column;
   flex-wrap: wrap;
-  /*justify-content: center;*/
   margin-top: 0px;
 }
 
@@ -116,17 +105,19 @@ body {
 }
 
 .buscador2 {
-  top: 0px;
-  font-family: 'Courier New', Courier, monospace;
-  /*color: rgb(254, 254, 255);*/
+  
   max-width: fit-content;
   margin: 0 auto;
 }
 
-.selectorAZ {
-  position: relative;
-  font-family: 'Courier New', Courier, monospace;
-  color: rgb(0, 0, 0);
+.selector1 {
+  border: 2px solid #000000;
+  font-size: 12px;
+  height: 30px;
+  width: 50px;
+  border-radius: 5px;
+  margin: 10px;
+  text-align: center;
 }
 
 input {
@@ -201,9 +192,9 @@ input {
 .frase {
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: #7AE868;
-  font-size: x-large;
+  font-size: 30px;
   text-align: center;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 }
 
 
@@ -215,13 +206,14 @@ input {
 }
 
 .tituloPersonajes {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  /*font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;*/
+  font-family: 'Creepster', cursive;
   color: #000000;
-  font-size: xx-large;
+  font-size: 40px;
   text-align: center;
   letter-spacing: 3px;
   align-items: center;
-  padding: 40px;
+  margin: 20px 10px;
 }
 
 /*EMPIEZA ESTILO DE LAS TARJETAS*/
@@ -278,7 +270,8 @@ input {
 }
 
 .multiversos {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+ /*font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;*/
+  font-family: 'Creepster', cursive;
   color: #000000;
   font-size: X-large;
   text-align: center;
@@ -362,7 +355,60 @@ input {
   color: white;
 }
 
-/*EMPIEZA CARRUSEL*/
+/*EMPIEZA CARRUSEL INTENTO 2*/
+
+.carrusel{
+  width: 90%;
+  /*max-width: 120em;*/
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.carrusel .grande{
+  width: 400%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content:space-around;
+  align-items: center;
+  transition: all .5s ease;
+  transform: translateX(0%);
+}
+
+.carrusel img{
+  width: calc( 400% / 5 0em);
+  height: 300px;
+  border-radius: 10px;
+}
+
+.carrusel .puntos{
+  width: 100%;
+  padding: .4em;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0 auto;
+}
+
+.carrusel .punto{
+  width: 2em;
+  height: 2em;
+  background-color: rgba(0, 0, 0, 0.441);
+  margin: 1em 1em 0;
+  border-radius: 30px;
+}
+
+.carrusel .punto.activo{
+  background-color: rgb(0, 0, 0);
+}
+
+
+
+
+
+
+/*EMPIEZA CARRUSEL INTENTO 1
 
 small,
 a {
@@ -447,7 +493,7 @@ a {
   }
 }
 
-.carrusel-arrow { /*este es el circulo*/
+.carrusel-arrow { 
   border-radius: 30px;
   background-color: #000000;
   position: fixed;
@@ -476,5 +522,5 @@ a {
 
 .carrusel-next{
   right: 0;
-}
+}*/
 

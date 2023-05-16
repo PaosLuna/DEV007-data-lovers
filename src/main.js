@@ -1,6 +1,7 @@
 import data from './data/rickandmorty/rickandmorty.js';
 console.log(data.results);
-import {filtrar1, filtrar, isalfabeto, mostrarMultiversos} from './data.js';
+import {filtrar1, filtrar, isalfabeto, mostrarMultiversos, filtrarorigen} from './data.js';
+
 //AQUÍ EMPIEZA NUESTRO CÓDIGO
 const seccion1 = document.getElementById("container");
 const seccion2 = document.getElementById("seccion2");
@@ -8,12 +9,12 @@ const seccion3 = document.getElementById("seccion3");
 const header1 = document.getElementById("header1");
 const header2 = document.getElementById("header2");
 
-//BOTONES HEADER PRUEBA
+//BOTONES HEADER 
 const headerInicio = document.getElementById("headerInicio");
 const headerPersonajes = document.getElementById("headerPersonajes");
 const headerEpisodios = document.getElementById("headerEpisodios");
 const headerMultiversos = document.getElementById("headerMultiversos");
-//TERMINA BOTONES HEADER PRUEBA
+//TERMINA BOTONES HEADER 
 
 const espacioPersonajes = document.getElementById("personajes");
 const espacioMulti = document.getElementById("personajesMulti");
@@ -21,7 +22,8 @@ seccion2.style.display = 'none';
 seccion3.style.display = 'none';
 header2.style.display = 'none';
 
-//INTERACCIÓN BOTONES HEADER PRUEBA
+
+//INTERACCIÓN BOTONES HEADER 
 headerInicio.addEventListener("click", ()=> {
     cerrarSeccion2()
     cerrarSeccion3()
@@ -30,11 +32,13 @@ headerPersonajes.addEventListener("click", ()=> {
     cerrarSeccion3()
     cerrarSeccion1()
 });    
-//headerEpisodios.addEventListener("click", ()=> {
+
 headerMultiversos.addEventListener("click", ()=> {  
     abrirSeccion3()
 });    
-//TERMINA INTERACCIÓN BOTONES HEADER PRUEBA
+
+//headerEpisodios.addEventListener("click", ()=> {
+//TERMINA INTERACCIÓN BOTONES HEADER 
 
 
 
@@ -53,11 +57,7 @@ function cerrarSeccion1(){
     header2.style.display = 'block';
     header1.style.display = 'none';
 }
-//CIERRA SECCIÓN 2 Y ABRE LA 1
-const botonInicio = document.getElementById("botonInicio");
-botonInicio.addEventListener("click", ()=> {
-    cerrarSeccion2();
-});
+
 function cerrarSeccion2(){
     seccion2.style.display = 'none';
     seccion1.style.display = 'flex';
@@ -81,9 +81,10 @@ function abrirSeccion3(){
 }
 //CIERRA SECCIÓN 3 Y ABRE LA 1
 const botonInicio2 = document.getElementById("botonInicio2");
-botonInicio2.addEventListener("click", ()=> {
+/*botonInicio2.addEventListener("click", ()=> {
     cerrarSeccion3();
-});
+});*/
+
 function cerrarSeccion3(){
     seccion2.style.display = 'none';
     seccion1.style.display = 'flex';
@@ -91,6 +92,19 @@ function cerrarSeccion3(){
     header1.style.display = 'flex';
     header2.style.display = 'none';
 }
+
+//DA INTERACCIÓN A LOS BUSCADORES
+const botonBuscador = document.getElementById("botonBuscador");
+botonBuscador.addEventListener("click", filtrar)
+const botonBuscar = document.getElementById("botonBuscar");
+botonBuscar.addEventListener ("click", event => {
+    //event.preventDefault;
+    filtrar1();
+    cerrarSeccion1();
+})
+
+
+
 //MOSTRAR TODOS LOS PERSONAJES SIN FILTRO
 function mostrarTodo(){
     for (let todos of data.results){
@@ -100,14 +114,14 @@ function mostrarTodo(){
 }
 
 
-//FILTRO ABC
+//MOSTRAR FILTRO ABC
 function mostrarFiltrado(orden){
     let dataFiltrado = isalfabeto();
     let dataFiltradoReverso = isalfabeto().reverse();
     espacioPersonajes.innerHTML = ""
     if(orden === "descendente"){
         for (let todos of dataFiltradoReverso){
-            espacioPersonajes.innerHTML += '<div class="tarjetaP" id="tarjetaP">' + '<img class="imagenTarjeta" src="' + todos.image + '">' + '<br>' + '<p class="textoTarjeta">' + "Nombre: " + todos.name + '<br>'  + "Estatus: " + todos.status + '<br>' + "Especie: " + todos.species + '<br>' + "Tipo: " + todos.type + '<br>' + "Genero: " + todos.gender + '<br>' + "Origen: " + todos.origin.name + '<br>' + "Locación: " + todos.location.name + '</p>' + '</div>';
+            espacioPersonajes.innerHTML += '<div class="tarjetaP" id="tarjetaP">' + '<img class="imagenTarjeta" src="' + todos.image + '">' + '<br>' + '<p class="textoTarjeta">' + "Nombre: " + todos.name + '<br>'  + "Estatus: " + todos.status + '<br>' + "Especie: " + todos.species + '<br>' + "Tipo: " + todos.type + '<br>' + "Genero: " + todos.gender + '<br>' + "Origen: " + todos.origin.name + '<br>' + "Locación: " + todos.location.name + '</p>' + '</div>';  
         }
     } else {
         for (let todos of dataFiltrado){
@@ -115,7 +129,8 @@ function mostrarFiltrado(orden){
         }
     }
 }
-//ESTO ES DEL SELECTOR POR ALFABETO INTENTO 1
+
+//SELECTOR POR ALFABETO 
 const selectorAbc = document.getElementById("selector1");
 selectorAbc.addEventListener("change", function(){
     const seleccionado = selectorAbc.value;
@@ -128,71 +143,82 @@ selectorAbc.addEventListener("change", function(){
     }
 });
 
+/*FUNCION PARA EL CARRUSEL INTENTO 2*/
+
+const grande = document.querySelector('.grande');
+const punto = document.querySelectorAll('.punto');
+
+punto.forEach( ( cadaPunto ,  i )=> {
+    punto[i].addEventListener('click',()=>{
+        
+        let posicion = i
+        let operacion = posicion * -22
+
+        grande.style.transform = `translateX(${ operacion}%)`
+
+        punto.forEach( (cadaPunto , i )=>{
+            punto[i].classList.remove('activo')
+        })
+        punto[i].classList.add('activo')
+    })
+})
 
 
 
+//FILTRA PERSONAJES POR MULTIVERSOS
+const personajesmulti = document.getElementById("personajesMulti")
+const abandango = document.getElementById('abandango');
+abandango.addEventListener('click', function(){
+    //const selectAbandango = abandango.value;
+filtrarorigen.forEach(origin => {
+  personajesmulti.innerHTML += `
+  <
+`
+})
+});
 
 
+/*FUNCION PARA EL CARRUSEL INTENTO 1
+const botonSiguiente = document.getElementById("button-next");
 
+botonSiguiente.addEventListener("click", ()=> {
+    App();
+})
 
+function App() {
 
+window.onload = function(event) {
+    let app = new App();
+    window.app = app;
+}
 
+app.prototype.processingButton = function(event) {
+    const btn = event.currentTarget;
+    const carruselList = event.currentTarget.parentNode;
+    const track = event.currentTarget.parentNode.querySelector("carrusel-track");
+    const carrusel = track.querySelectorAll("carrusel");
+    const carruselWidth = carrusel[0].offsetWidth;
+    const trackWidth = track.offsetWidth;
+    const listWidth = carruselList.offsetWidth;
+    track.style.left == "" ? leftPosition = track.style.left = 0 : leftPosition = parseFloat(track.style.left.slice(0,-2) * -1);
+    btn.dataset.button == "button-prev" ? prevAction(leftPosition, carruselWidth, track) : nextAction(leftPosition, trackWidth, listWidth, carruselWidth, track);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*/ORDENAR DE A-Z
-let orden = "AZ";
-let inverso = "ZA";
-function mostrarFiltrado(ordenAZ){
-    let dataFiltrado = isalfabeto(ordenAZ);
-    espacioPersonajes.innerHTML = ""
-    for (let todos of dataFiltrado){
-        console.log(todos);
-        espacioPersonajes.innerHTML += '<div class="tarjetaP" id="tarjetaP">' + '<img class="imagenTarjeta" src="' + todos.image + '">' + '<br>' + '<p class="textoTarjeta">' + "Nombre: " + todos.name + '<br>'  + "Estatus: " + todos.status + '<br>' + "Especie: " + todos.species + '<br>' + "Tipo: " + todos.type + '<br>' + "Genero: " + todos.gender + '<br>' + "Origen: " + todos.origin.name + '<br>' + "Locación: " + todos.location.name + '</p>' + '</div>';
+let prevAction = (leftPosition, carruselWidth, track) => {
+    if(leftPosition > 0){
+        track.style.left = `${-1 * (leftPosition - carruselWidth)} px`;
     }
 }
-//ESTO ES DEL SELECTOR POR ALFABETO INTENTO 1
-const selectorAbc = document.getElementById("selector1");
-selector1.addEventListener("change", function(){
-    const seleccionado = selector1.value;
-    if(selectorAbc == "A-Z"){
-        const seleccionado = selector1.value;
-    return mostrarFiltrado(seleccionado);
+
+let nextAction = (leftPosition, trackWidth, listWidth, carruselWidth, track) =>{
+    if(leftPosition < (trackWidth - listWidth)){
+        track.style.left = `${-1 * (leftPosition + carruselWidth)} px`;
     }
-    if (selectorAbc == "Z-A") {
-        const seleccionado = selector1.value;
-    return mostrarFiltrado(seleccionado).reverse();
-    }
-    /*if (selector1 === "A-Z"){
-    const seleccionado = selector1.value;
-  mostrarFiltrado(seleccionado);
-  } else {
-    mostrarFiltrado(inverso);
-  }
-});
+}
+
+}*/
+
+
 /*PARA MOSTRAR MULTIVERSOS
 function mostrarFiltrado2(mostrarMultiversos){
     let dataMulti = isMultiversos(mostrarMultiversos);
@@ -201,18 +227,4 @@ function mostrarFiltrado2(mostrarMultiversos){
         espacioMulti.innerHTML += '<div class="tarjetaP" id="tarjetaP">' + '<img class="imagenTarjeta" src="' + todos.image + '">' + '<br>' + '<p class="textoTarjeta">' + "Nombre: " + todos.name + '<br>'  + "Estatus: " + todos.status + '<br>' + "Especie: " + todos.species + '<br>' + "Tipo: " + todos.type + '<br>' + "Genero: " + todos.gender + '<br>' + "Origen: " + todos.origin.name + '<br>' + "Locación: " + todos.location.name + '</p>' + '</div>';
     }
 }*/
-const botonBuscador = document.getElementById("botonBuscador");
-botonBuscador.addEventListener("click", filtrar)
-const botonBuscar = document.getElementById("botonBuscar");
-botonBuscar.addEventListener ("click", event => {
-    //event.preventDefault;
-    filtrar1();
-    cerrarSeccion1();
-})
 
-
-//ESTO ES DEL BUSCADOR INTENTO 1
-//let buscadorDos = document.getElementById("buscadorDos");
-//let tarjetaP = document.getElementById("tarjetaP");
-//buscadorFiltro(buscadorDos, tarjetaP);
-//ESTO ES DEL BUSCADOR INTENTO 1

@@ -77,12 +77,6 @@ return dataAlfabeto
 }
 
 
-
-
-
-
-
-
 //FILTRA POR MULTIVERSOS
 function mostrarMultiversos(){
   const multiversos = data.results;
@@ -95,8 +89,19 @@ function mostrarMultiversos(){
 mostrarMultiversos();
 
 
+//FILTRA POR MULTIVERSOS POR PERSONAJES
+function filtrarorigen(data, origen) {
+  return data.results.filter(personajes => {
+    return personajes.origin.name == origen
+  })
+}
+console.log(filtrarorigen(data,'Earth (C-137)'));
+//PRUEBA 2 FUNCIONAL DE PERSONAJES POR MULTIVERSO
+/*const origen = data.results.filter(result => {result.origin.name.includes('Earth (C-137)')});
+console.log(origen);*/
 
-export {filtrar1, filtrar, isalfabeto, mostrarMultiversos};
+export {filtrar1, filtrar, isalfabeto, mostrarMultiversos, filtrarorigen};
+
 
 
 

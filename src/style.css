@@ -374,7 +374,7 @@ input {
   transform: translateX(0%);
 }
 
-.carrusel img{
+.carrusel input{
   width: calc( 400% / 5 0em);
   height: 300px;
   border-radius: 10px;

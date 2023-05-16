@@ -1,11 +1,4 @@
 import data from './data/rickandmorty/rickandmorty.js';
-// estas funciones son de ejemplo
-//console.log("hola");
-/*const filtrarNombres = (dataName) => {
-  let name = data.results.filter((e) => e.name === dataName);
-  console.log(name);
-};
-export {filtrarNombres};*/
 
 //BUSCADOR1 BUENO YA FUNCIONA, FAVOR DE NO MOVER NADA
 const buscador1 = document.getElementById("buscador1");
@@ -65,14 +58,6 @@ if(nombreA>nombreB){
   return 1
 }
 })
-/*if(upward === "A-Z"){
-return dataAlfabeto;
-}
-if(upward === "Z-A") {
-  const reversa = dataAlfabeto.reverse();
-  return dataAlfabeto;
-}
-return dataAlfabeto;*/
 return dataAlfabeto
 }
 
@@ -89,13 +74,17 @@ function mostrarMultiversos(){
 mostrarMultiversos();
 
 
+
 //FILTRA POR MULTIVERSOS POR PERSONAJES
-function filtrarorigen(data, origen) {
+function filtrarorigen(data, c137) {
   return data.results.filter(personajes => {
-    return personajes.origin.name == origen
+    return personajes.origin.name == c137
   })
 }
-console.log(filtrarorigen(data,'Earth (C-137)'));
+
+/*console.log(filtrarorigen(data,'Earth (C-137)'));*/
+
+
 //PRUEBA 2 FUNCIONAL DE PERSONAJES POR MULTIVERSO
 /*const origen = data.results.filter(result => {result.origin.name.includes('Earth (C-137)')});
 console.log(origen);*/

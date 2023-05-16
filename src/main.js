@@ -98,7 +98,6 @@ const botonBuscador = document.getElementById("botonBuscador");
 botonBuscador.addEventListener("click", filtrar)
 const botonBuscar = document.getElementById("botonBuscar");
 botonBuscar.addEventListener ("click", event => {
-    //event.preventDefault;
     filtrar1();
     cerrarSeccion1();
 })
@@ -165,7 +164,7 @@ punto.forEach( ( cadaPunto ,  i )=> {
 
 
 
-//FILTRA PERSONAJES POR MULTIVERSOS
+/*FILTRA PERSONAJES POR MULTIVERSOS
 const personajesmulti = document.getElementById("personajesMulti")
 const abandango = document.getElementById('abandango');
 abandango.addEventListener('click', function(){
@@ -175,7 +174,7 @@ filtrarorigen.forEach(origin => {
   <
 `
 })
-});
+});*/
 
 
 /*FUNCION PARA EL CARRUSEL INTENTO 1
@@ -218,13 +217,4 @@ let nextAction = (leftPosition, trackWidth, listWidth, carruselWidth, track) =>{
 
 }*/
 
-
-/*PARA MOSTRAR MULTIVERSOS
-function mostrarFiltrado2(mostrarMultiversos){
-    let dataMulti = isMultiversos(mostrarMultiversos);
-    for (let todos of dataMulti){
-        console.log(todos);
-        espacioMulti.innerHTML += '<div class="tarjetaP" id="tarjetaP">' + '<img class="imagenTarjeta" src="' + todos.image + '">' + '<br>' + '<p class="textoTarjeta">' + "Nombre: " + todos.name + '<br>'  + "Estatus: " + todos.status + '<br>' + "Especie: " + todos.species + '<br>' + "Tipo: " + todos.type + '<br>' + "Genero: " + todos.gender + '<br>' + "Origen: " + todos.origin.name + '<br>' + "Locación: " + todos.location.name + '</p>' + '</div>';
-    }
-}*/
 

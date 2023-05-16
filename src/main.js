@@ -164,17 +164,24 @@ punto.forEach( ( cadaPunto ,  i )=> {
 
 
 
-/*FILTRA PERSONAJES POR MULTIVERSOS
+//FILTRA PERSONAJES POR MULTIVERSOS
+const tarjetamultiverso = document.querySelectorAll(".tarjetamultiverso");
 const personajesmulti = document.getElementById("personajesMulti")
-const abandango = document.getElementById('abandango');
-abandango.addEventListener('click', function(){
-    //const selectAbandango = abandango.value;
-filtrarorigen.forEach(origin => {
-  personajesmulti.innerHTML += `
-  <
-`
-})
-});*/
+  
+  tarjetamultiverso.forEach(element => {
+    element.addEventListener('click', function(e){
+      let origen1 = e.target.alt;
+    
+      const personajesFiltrados = filtrarorigen(data, origen1);
+      personajesFiltrados.forEach(personaje => {
+        personajesmulti.innerHTML += `<div class="tarjetaP" id="tarjetaP">
+          <p>${personaje.name}</p>
+          <p>${personaje.origin.name}</p>
+        </div>`;
+      });
+    });
+  });
+  
 
 
 /*FUNCION PARA EL CARRUSEL INTENTO 1

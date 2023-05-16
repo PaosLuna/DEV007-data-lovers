@@ -76,9 +76,9 @@ mostrarMultiversos();
 
 
 //FILTRA POR MULTIVERSOS POR PERSONAJES
-function filtrarorigen(data, c137) {
+function filtrarorigen(data, origen) {
   return data.results.filter(personajes => {
-    return personajes.origin.name == c137
+    return personajes.origin.name == origen
   })
 }
 

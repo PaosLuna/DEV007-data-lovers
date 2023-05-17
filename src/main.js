@@ -6,6 +6,7 @@ import {filtrar1, filtrar, isalfabeto, mostrarMultiversos, filtrarorigen} from '
 const seccion1 = document.getElementById("container");
 const seccion2 = document.getElementById("seccion2");
 const seccion3 = document.getElementById("seccion3");
+const seccion4 = document.getElementById("seccion4");
 const header1 = document.getElementById("header1");
 const header2 = document.getElementById("header2");
 
@@ -19,6 +20,7 @@ const headerMultiversos = document.getElementById("headerMultiversos");
 const espacioPersonajes = document.getElementById("personajes");
 seccion2.style.display = 'none';
 seccion3.style.display = 'none';
+seccion4.style.display = 'none';
 header2.style.display = 'none';
 
 
@@ -26,6 +28,7 @@ header2.style.display = 'none';
 headerInicio.addEventListener("click", ()=> {
     cerrarSeccion2()
     cerrarSeccion3()
+    cerrarSeccion4()
 });    
 headerPersonajes.addEventListener("click", ()=> {
     cerrarSeccion3()
@@ -36,7 +39,9 @@ headerMultiversos.addEventListener("click", ()=> {
     abrirSeccion3()
 });    
 
-//headerEpisodios.addEventListener("click", ()=> {
+headerEpisodios.addEventListener("click", ()=> {
+    abrirSeccion4()
+});
 //TERMINA INTERACCIÓN BOTONES HEADER 
 
 
@@ -72,6 +77,26 @@ function cerrarSeccion3(){
     header1.style.display = 'flex';
     header2.style.display = 'none';
 }
+
+function abrirSeccion4(){
+    seccion1.style.display = 'none';
+    seccion2.style.display = 'none';
+    seccion3.style.display = 'none';
+    seccion4.style.display = 'block';
+    header2.style.display = 'block';
+    header1.style.display = 'none';
+}
+
+function cerrarSeccion4(){
+    seccion2.style.display = 'none';
+    seccion1.style.display = 'flex';
+    seccion3.style.display = 'none';
+    seccion4.style.display = 'none';
+    header1.style.display = 'flex';
+    header2.style.display = 'none';
+}
+
+
 
 //CIERRA SECCIÓN 1 Y ABRE LA 2
 const botonTodos = document.getElementById("botonTodos");

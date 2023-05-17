@@ -536,3 +536,20 @@ a {
   right: 0;
 }*/
 
+/*SECCIÓN 4: EPISODIOS*/
+#seccion4 {
+  display: flex;
+  position: relative;
+}
+
+.episodios {
+ /*font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;*/
+  font-family: 'Creepster', cursive;
+  color: #000000;
+  font-size: X-large;
+  text-align: center;
+  letter-spacing: 3px;
+  max-width: fit-content;
+  margin: 0 auto;
+  padding: 60px;
+}

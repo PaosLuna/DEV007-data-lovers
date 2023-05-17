@@ -1,9 +1,11 @@
 import data from './data/rickandmorty/rickandmorty.js';
 
-//BUSCADOR1 BUENO YA FUNCIONA, FAVOR DE NO MOVER NADA
+ 
 const buscador1 = document.getElementById("buscador1");
 const resultado = document.querySelector('#resultado');
 const espacioPersonajes = document.getElementById("personajes");
+
+//BUSCADOR1
 const filtrar1 = () => {
     resultado.innerHTML = '';
     const texto = buscador1.value.toLowerCase();
@@ -11,7 +13,18 @@ const filtrar1 = () => {
         let nombre = personaje.name.toLowerCase();
         if (nombre.indexOf(texto) !== -1){
             resultado.innerHTML += `
-            <div class="tarjetaP">${'<img class="imagenTarjeta" src="' + personaje.image + '">' + '<br>' + '<p class="textoTarjeta">' + personaje.name + '<br>' + "Estatus: " + personaje.status + '<br>' + "Especie: " + personaje.species + '<br>' + "Tipo: " + personaje.type + '<br>' + "Genero: " + personaje.gender + '<br>' + "Origen: " + personaje.origin.name + '<br>' + "Locación: " + personaje.location.name + '</p>'}</div>
+            <div class="tarjetaP" id="tarjetaP">
+            <img class="imagenTarjeta" src="${personaje.image}"></img>
+            <p class="textoTarjeta">
+            Nombre: ${personaje.name} <br>
+            Estatus: ${personaje.status} <br>
+            Especie: ${personaje.species} <br>
+            Tipo: ${personaje.type} <br>
+            Genero: ${personaje.gender} <br>
+            Origen: ${personaje.origin.name} <br>
+            Locación: ${personaje.location.name}
+            </p>
+            </div>
             `
             espacioPersonajes.style.display = 'none';
         }
@@ -23,7 +36,7 @@ const filtrar1 = () => {
     }
 }
 
-//BUSCADOR2 BUENO YA FUNCIONA, FAVOR DE NO MOVER NADA
+//BUSCADOR2
 const buscadorDos = document.getElementById("buscadorDos");
 const filtrar = () => {
     resultado.innerHTML = '';
@@ -32,7 +45,18 @@ const filtrar = () => {
         let nombre = personaje.name.toLowerCase();
         if (nombre.indexOf(texto) !== -1){
             resultado.innerHTML += `
-            <div class="tarjetaP">${'<img class="imagenTarjeta" src="' + personaje.image + '">' + '<br>' + '<p class="textoTarjeta">' + personaje.name + '<br>' + "Estatus: " + personaje.status + '<br>' + "Especie: " + personaje.species + '<br>' + "Tipo: " + personaje.type + '<br>' + "Genero: " + personaje.gender + '<br>' + "Origen: " + personaje.origin.name + '<br>' + "Locación: " + personaje.location.name + '</p>'}</div>
+            <div class="tarjetaP" id="tarjetaP">
+            <img class="imagenTarjeta" src="${personaje.image}"></img>
+            <p class="textoTarjeta">
+            Nombre: ${personaje.name} <br>
+            Estatus: ${personaje.status} <br>
+            Especie: ${personaje.species} <br>
+            Tipo: ${personaje.type} <br>
+            Genero: ${personaje.gender} <br>
+            Origen: ${personaje.origin.name} <br>
+            Locación: ${personaje.location.name}
+            </p>
+            </div>
             `
             espacioPersonajes.style.display = 'none';
         }
@@ -74,20 +98,13 @@ function mostrarMultiversos(){
 mostrarMultiversos();
 
 
-
-//FILTRA POR MULTIVERSOS POR PERSONAJES
+//FILTRA PERSONAJES POR MULTIVERSO
 function filtrarorigen(data, origen) {
   return data.results.filter(personajes => {
     return personajes.origin.name == origen
   })
 }
 
-/*console.log(filtrarorigen(data,'Earth (C-137)'));*/
-
-
-//PRUEBA 2 FUNCIONAL DE PERSONAJES POR MULTIVERSO
-/*const origen = data.results.filter(result => {result.origin.name.includes('Earth (C-137)')});
-console.log(origen);*/
 
 export {filtrar1, filtrar, isalfabeto, mostrarMultiversos, filtrarorigen};
 

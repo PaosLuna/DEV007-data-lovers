@@ -17,7 +17,6 @@ const headerMultiversos = document.getElementById("headerMultiversos");
 //TERMINA BOTONES HEADER 
 
 const espacioPersonajes = document.getElementById("personajes");
-const espacioMulti = document.getElementById("personajesMulti");
 seccion2.style.display = 'none';
 seccion3.style.display = 'none';
 header2.style.display = 'none';
@@ -42,14 +41,6 @@ headerMultiversos.addEventListener("click", ()=> {
 
 
 
-
-
-//CIERRA SECCIÓN 1 Y ABRE LA 2
-const botonTodos = document.getElementById("botonTodos");
-botonTodos.addEventListener("click", ()=> {
-    cerrarSeccion1();
-    mostrarTodo();
-});
 function cerrarSeccion1(){
     seccion1.style.display = 'none';
     seccion2.style.display = 'block';
@@ -65,13 +56,7 @@ function cerrarSeccion2(){
     header1.style.display = 'flex';
     header2.style.display = 'none';
 }
-//CIERRA SECCIÓN 1 Y ABRE LA 3
-const botonMultiversos = document.getElementById("botonMultiversos");
-botonMultiversos.addEventListener("click", ()=> {
-    abrirSeccion3();
-    mostrarTodo();
-    //mostrarFiltrado2();
-});
+
 function abrirSeccion3(){
     seccion1.style.display = 'none';
     seccion2.style.display = 'none';
@@ -79,11 +64,6 @@ function abrirSeccion3(){
     header2.style.display = 'block';
     header1.style.display = 'none';
 }
-//CIERRA SECCIÓN 3 Y ABRE LA 1
-const botonInicio2 = document.getElementById("botonInicio2");
-/*botonInicio2.addEventListener("click", ()=> {
-    cerrarSeccion3();
-});*/
 
 function cerrarSeccion3(){
     seccion2.style.display = 'none';
@@ -92,6 +72,23 @@ function cerrarSeccion3(){
     header1.style.display = 'flex';
     header2.style.display = 'none';
 }
+
+//CIERRA SECCIÓN 1 Y ABRE LA 2
+const botonTodos = document.getElementById("botonTodos");
+botonTodos.addEventListener("click", ()=> {
+    cerrarSeccion1();
+    mostrarTodo();
+});
+
+//CIERRA SECCIÓN 1 Y ABRE LA 3
+const botonMultiversos = document.getElementById("botonMultiversos");
+botonMultiversos.addEventListener("click", ()=> {
+    abrirSeccion3();
+    mostrarTodo();
+    //mostrarFiltrado2();
+});
+
+
 
 //DA INTERACCIÓN A LOS BUSCADORES
 const botonBuscador = document.getElementById("botonBuscador");
@@ -107,8 +104,21 @@ botonBuscar.addEventListener ("click", event => {
 //MOSTRAR TODOS LOS PERSONAJES SIN FILTRO
 function mostrarTodo(){
     for (let todos of data.results){
-        console.log(todos);
-        espacioPersonajes.innerHTML += '<div class="tarjetaP" id="tarjetaP">' + '<img class="imagenTarjeta" src="' + todos.image + '">' + '<br>' + '<p class="textoTarjeta">' + "Nombre: " + todos.name + '<br>'  + "Estatus: " + todos.status + '<br>' + "Especie: " + todos.species + '<br>' + "Tipo: " + todos.type + '<br>' + "Genero: " + todos.gender + '<br>' + "Origen: " + todos.origin.name + '<br>' + "Locación: " + todos.location.name + '</p>' + '</div>';
+        //console.log(todos);
+        espacioPersonajes.innerHTML += `
+        <div class="tarjetaP" id="tarjetaP">
+        <img class="imagenTarjeta" src="${todos.image}"></img>
+        <p class="textoTarjeta">
+        Nombre: ${todos.name} <br>
+        Estatus: ${todos.status} <br>
+        Especie: ${todos.species} <br>
+        Tipo: ${todos.type} <br>
+        Genero: ${todos.gender} <br>
+        Origen: ${todos.origin.name} <br>
+        Locación: ${todos.location.name}
+        </p>
+        </div>
+        `
     }
 }
 
@@ -120,11 +130,37 @@ function mostrarFiltrado(orden){
     espacioPersonajes.innerHTML = ""
     if(orden === "descendente"){
         for (let todos of dataFiltradoReverso){
-            espacioPersonajes.innerHTML += '<div class="tarjetaP" id="tarjetaP">' + '<img class="imagenTarjeta" src="' + todos.image + '">' + '<br>' + '<p class="textoTarjeta">' + "Nombre: " + todos.name + '<br>'  + "Estatus: " + todos.status + '<br>' + "Especie: " + todos.species + '<br>' + "Tipo: " + todos.type + '<br>' + "Genero: " + todos.gender + '<br>' + "Origen: " + todos.origin.name + '<br>' + "Locación: " + todos.location.name + '</p>' + '</div>';  
+            espacioPersonajes.innerHTML += `
+            <div class="tarjetaP" id="tarjetaP">
+            <img class="imagenTarjeta" src="${todos.image}"></img>
+            <p class="textoTarjeta">
+            Nombre: ${todos.name} <br>
+            Estatus: ${todos.status} <br>
+            Especie: ${todos.species} <br>
+            Tipo: ${todos.type} <br>
+            Genero: ${todos.gender} <br>
+            Origen: ${todos.origin.name} <br>
+            Locación: ${todos.location.name}
+            </p>
+            </div>
+            `  
         }
     } else {
         for (let todos of dataFiltrado){
-            espacioPersonajes.innerHTML += '<div class="tarjetaP" id="tarjetaP">' + '<img class="imagenTarjeta" src="' + todos.image + '">' + '<br>' + '<p class="textoTarjeta">' + "Nombre: " + todos.name + '<br>'  + "Estatus: " + todos.status + '<br>' + "Especie: " + todos.species + '<br>' + "Tipo: " + todos.type + '<br>' + "Genero: " + todos.gender + '<br>' + "Origen: " + todos.origin.name + '<br>' + "Locación: " + todos.location.name + '</p>' + '</div>';
+            espacioPersonajes.innerHTML += `
+            <div class="tarjetaP" id="tarjetaP">
+            <img class="imagenTarjeta" src="${todos.image}"></img>
+            <p class="textoTarjeta">
+            Nombre: ${todos.name} <br>
+            Estatus: ${todos.status} <br>
+            Especie: ${todos.species} <br>
+            Tipo: ${todos.type} <br>
+            Genero: ${todos.gender} <br>
+            Origen: ${todos.origin.name} <br>
+            Locación: ${todos.location.name}
+            </p>
+            </div>
+            `
         }
     }
 }
@@ -142,8 +178,8 @@ selectorAbc.addEventListener("change", function(){
     }
 });
 
-/*FUNCION PARA EL CARRUSEL INTENTO 2*/
 
+/*FUNCION PARA EL CARRUSEL INTENTO 2*/
 const grande = document.querySelector('.grande');
 const punto = document.querySelectorAll('.punto');
 
@@ -171,13 +207,23 @@ const personajesmulti = document.getElementById("personajesMulti")
   tarjetamultiverso.forEach(element => {
     element.addEventListener('click', function(e){
       let origen1 = e.target.alt;
-    
+      personajesmulti.innerHTML = ""
       const personajesFiltrados = filtrarorigen(data, origen1);
       personajesFiltrados.forEach(personaje => {
-        personajesmulti.innerHTML += `<div class="tarjetaP" id="tarjetaP">
-          <p>${personaje.name}</p>
-          <p>${personaje.origin.name}</p>
-        </div>`;
+        personajesmulti.innerHTML += `
+        <div class="tarjetaP" id="tarjetaP">
+        <img class="imagenTarjeta" src="${personaje.image}"></img>
+        <p class="textoTarjeta">
+        Nombre: ${personaje.name} <br>
+        Estatus: ${personaje.status} <br>
+        Especie: ${personaje.species} <br>
+        Tipo: ${personaje.type} <br>
+        Genero: ${personaje.gender} <br>
+        Origen: ${personaje.origin.name} <br>
+        Locación: ${personaje.location.name}
+        </p>
+        </div>
+        `
       });
     });
   });

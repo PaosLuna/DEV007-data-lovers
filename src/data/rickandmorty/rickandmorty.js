@@ -936,7 +936,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/36.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/14"
+              "episode14"
           ],
           "url": "https://rickandmortyapi.com/api/character/36",
           "created": "2017-11-05T09:31:08.952Z"
@@ -958,7 +958,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/37.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/8"
+              "episode8"
           ],
           "url": "https://rickandmortyapi.com/api/character/37",
           "created": "2017-11-05T09:38:22.960Z"
@@ -980,13 +980,13 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/38.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/1",
-              "https://rickandmortyapi.com/api/episode/2",
-              "https://rickandmortyapi.com/api/episode/3",
-              "https://rickandmortyapi.com/api/episode/4",
-              "https://rickandmortyapi.com/api/episode/5",
-              "https://rickandmortyapi.com/api/episode/6",
-              "https://rickandmortyapi.com/api/episode/22"
+              "episode1",
+              "episode2",
+              "episode3",
+              "episode4",
+              "episode5",
+              "episode6",
+              "episode22"
           ],
           "url": "https://rickandmortyapi.com/api/character/38",
           "created": "2017-11-05T09:48:44.230Z"
@@ -1008,7 +1008,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/39.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/10"
+              "episode10"
           ],
           "url": "https://rickandmortyapi.com/api/character/39",
           "created": "2017-11-05T09:52:31.777Z"
@@ -1030,7 +1030,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/40.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/18"
+              "episode18"
           ],
           "url": "https://rickandmortyapi.com/api/character/40",
           "created": "2017-11-05T10:02:26.701Z"
@@ -1052,7 +1052,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/41.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/5"
+              "episode5"
           ],
           "url": "https://rickandmortyapi.com/api/character/41",
           "created": "2017-11-05T10:13:45.960Z"
@@ -1074,7 +1074,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/42.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/22"
+              "episode22"
           ],
           "url": "https://rickandmortyapi.com/api/character/42",
           "created": "2017-11-05T10:15:53.349Z"
@@ -1096,7 +1096,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/43.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/28"
+              "episode28"
           ],
           "url": "https://rickandmortyapi.com/api/character/43",
           "created": "2017-11-05T10:17:04.997Z"
@@ -1118,7 +1118,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/44.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/28"
+              "episode28"
           ],
           "url": "https://rickandmortyapi.com/api/character/44",
           "created": "2017-11-05T10:18:11.062Z"
@@ -1140,7 +1140,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/45.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/3"
+              "episode3"
           ],
           "url": "https://rickandmortyapi.com/api/character/45",
           "created": "2017-11-05T10:22:27.446Z"
@@ -1162,7 +1162,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/46.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/2"
+              "episode2"
           ],
           "url": "https://rickandmortyapi.com/api/character/46",
           "created": "2017-11-05T10:24:38.089Z"
@@ -1184,11 +1184,11 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/47.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/11",
-              "https://rickandmortyapi.com/api/episode/16",
-              "https://rickandmortyapi.com/api/episode/21",
-              "https://rickandmortyapi.com/api/episode/22",
-              "https://rickandmortyapi.com/api/episode/26"
+              "episode11",
+              "episode16",
+              "episode21",
+              "episode22",
+              "episode26"
           ],
           "url": "https://rickandmortyapi.com/api/character/47",
           "created": "2017-11-05T11:13:36.018Z"
@@ -1210,8 +1210,8 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/48.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/22",
-              "https://rickandmortyapi.com/api/episode/28"
+              "episode22",
+              "episode28"
           ],
           "url": "https://rickandmortyapi.com/api/character/48",
           "created": "2017-11-05T11:15:26.044Z"
@@ -1233,7 +1233,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/49.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/19"
+              "episode19"
           ],
           "url": "https://rickandmortyapi.com/api/character/49",
           "created": "2017-11-05T11:18:26.702Z"
@@ -1255,7 +1255,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/50.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/14"
+              "episode14"
           ],
           "url": "https://rickandmortyapi.com/api/character/50",
           "created": "2017-11-05T11:21:43.756Z"
@@ -1277,7 +1277,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/51.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/19"
+              "episode19"
           ],
           "url": "https://rickandmortyapi.com/api/character/51",
           "created": "2017-11-05T11:24:49.688Z"
@@ -1299,7 +1299,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/52.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/23"
+              "episode23"
           ],
           "url": "https://rickandmortyapi.com/api/character/52",
           "created": "2017-11-05T11:26:42.084Z"
@@ -1321,7 +1321,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/53.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/10"
+              "episode10"
           ],
           "url": "https://rickandmortyapi.com/api/character/53",
           "created": "2017-11-05T11:28:38.627Z"
@@ -1343,7 +1343,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/54.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/8"
+              "episode8"
           ],
           "url": "https://rickandmortyapi.com/api/character/54",
           "created": "2017-11-05T11:31:26.348Z"
@@ -1365,8 +1365,8 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/55.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/18",
-              "https://rickandmortyapi.com/api/episode/21"
+              "episode18",
+              "episode21"
           ],
           "url": "https://rickandmortyapi.com/api/character/55",
           "created": "2017-11-05T11:32:53.847Z"
@@ -1388,7 +1388,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/56.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/28"
+              "episode28"
           ],
           "url": "https://rickandmortyapi.com/api/character/56",
           "created": "2017-11-05T11:34:16.447Z"
@@ -1410,7 +1410,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/57.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/22"
+              "episode22"
           ],
           "url": "https://rickandmortyapi.com/api/character/57",
           "created": "2017-11-05T11:38:29.459Z"
@@ -1434,7 +1434,7 @@ export default  {
           "episode": [
               "https://rickandmortyapi.com/api/episode/6",
               "https://rickandmortyapi.com/api/episode/11",
-              "https://rickandmortyapi.com/api/episode/30"
+              "episode30"
           ],
           "url": "https://rickandmortyapi.com/api/character/58",
           "created": "2017-11-05T11:40:02.554Z"
@@ -1456,7 +1456,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/59.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/7"
+              "episode7"
           ],
           "url": "https://rickandmortyapi.com/api/character/59",
           "created": "2017-11-05T11:41:38.964Z"
@@ -1478,7 +1478,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/60.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/25"
+              "episode25"
           ],
           "url": "https://rickandmortyapi.com/api/character/60",
           "created": "2017-11-05T11:52:45.852Z"
@@ -1500,7 +1500,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/61.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/28"
+              "episode28"
           ],
           "url": "https://rickandmortyapi.com/api/character/61",
           "created": "2017-11-05T11:53:44.737Z"
@@ -1522,7 +1522,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/62.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/1"
+              "episode1"
           ],
           "url": "https://rickandmortyapi.com/api/character/62",
           "created": "2017-11-05T12:06:23.217Z"
@@ -1544,7 +1544,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/63.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/2"
+              "episode2"
           ],
           "url": "https://rickandmortyapi.com/api/character/63",
           "created": "2017-11-05T12:22:17.848Z"
@@ -1566,7 +1566,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/64.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/12"
+              "episode12"
           ],
           "url": "https://rickandmortyapi.com/api/character/64",
           "created": "2017-11-05T12:25:03.541Z"
@@ -1588,7 +1588,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/65.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/17"
+              "episode17"
           ],
           "url": "https://rickandmortyapi.com/api/character/65",
           "created": "2017-11-30T11:02:41.935Z"
@@ -1610,7 +1610,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/66.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/18"
+              "episode18"
           ],
           "url": "https://rickandmortyapi.com/api/character/66",
           "created": "2017-11-30T11:10:10.491Z"
@@ -1632,7 +1632,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/67.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/29"
+              "episode29"
           ],
           "url": "https://rickandmortyapi.com/api/character/67",
           "created": "2017-11-30T11:13:46.785Z"
@@ -1654,7 +1654,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/68.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/23"
+              "episode23"
           ],
           "url": "https://rickandmortyapi.com/api/character/68",
           "created": "2017-11-30T11:17:32.733Z"
@@ -1676,7 +1676,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/69.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/22"
+              "episode22"
           ],
           "url": "https://rickandmortyapi.com/api/character/69",
           "created": "2017-11-30T11:28:06.461Z"
@@ -1698,7 +1698,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/70.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/24"
+              "episode24"
           ],
           "url": "https://rickandmortyapi.com/api/character/70",
           "created": "2017-11-30T11:31:41.926Z"
@@ -1720,7 +1720,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/71.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/22"
+              "episode22"
           ],
           "url": "https://rickandmortyapi.com/api/character/71",
           "created": "2017-11-30T11:35:50.183Z"
@@ -1742,7 +1742,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/72.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/28"
+              "episode28"
           ],
           "url": "https://rickandmortyapi.com/api/character/72",
           "created": "2017-11-30T11:41:11.542Z"
@@ -1764,7 +1764,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/73.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/28"
+              "episode28"
           ],
           "url": "https://rickandmortyapi.com/api/character/73",
           "created": "2017-11-30T11:43:04.217Z"
@@ -1786,7 +1786,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/74.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/28"
+              "episode28"
           ],
           "url": "https://rickandmortyapi.com/api/character/74",
           "created": "2017-11-30T11:48:18.950Z"
@@ -1808,7 +1808,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/75.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/21"
+              "episode21"
           ],
           "url": "https://rickandmortyapi.com/api/character/75",
           "created": "2017-11-30T12:12:57.553Z"
@@ -1830,7 +1830,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/76.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/15"
+              "episode15"
           ],
           "url": "https://rickandmortyapi.com/api/character/76",
           "created": "2017-11-30T14:11:52.882Z"
@@ -1852,7 +1852,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/77.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/10"
+              "episode10"
           ],
           "url": "https://rickandmortyapi.com/api/character/77",
           "created": "2017-11-30T14:13:17.371Z"
@@ -1874,8 +1874,8 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/78.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/10",
-              "https://rickandmortyapi.com/api/episode/28"
+              "episode10",
+              "episode28"
           ],
           "url": "https://rickandmortyapi.com/api/character/78",
           "created": "2017-11-30T14:15:18.347Z"
@@ -1897,7 +1897,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/79.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/10"
+              "episode10"
           ],
           "url": "https://rickandmortyapi.com/api/character/79",
           "created": "2017-11-30T14:18:16.899Z"
@@ -1919,7 +1919,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/80.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/2"
+              "episode2"
           ],
           "url": "https://rickandmortyapi.com/api/character/80",
           "created": "2017-11-30T14:20:35.772Z"
@@ -1941,7 +1941,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/81.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/25"
+              "episode25"
           ],
           "url": "https://rickandmortyapi.com/api/character/81",
           "created": "2017-11-30T14:23:41.053Z"
@@ -1963,8 +1963,8 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/82.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/6",
-              "https://rickandmortyapi.com/api/episode/10"
+              "episode6",
+              "episode10"
           ],
           "url": "https://rickandmortyapi.com/api/character/82",
           "created": "2017-11-30T14:28:54.596Z"
@@ -1986,8 +1986,8 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/83.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/6",
-              "https://rickandmortyapi.com/api/episode/10"
+              "episode6",
+              "episode10"
           ],
           "url": "https://rickandmortyapi.com/api/character/83",
           "created": "2017-11-30T20:02:29.204Z"
@@ -2009,7 +2009,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/84.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/10"
+              "episode10"
           ],
           "url": "https://rickandmortyapi.com/api/character/84",
           "created": "2017-11-30T20:41:48.080Z"
@@ -2031,8 +2031,8 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/85.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/10",
-              "https://rickandmortyapi.com/api/episode/28"
+              "episode10",
+              "episode28"
           ],
           "url": "https://rickandmortyapi.com/api/character/85",
           "created": "2017-11-30T20:49:52.133Z"
@@ -2054,9 +2054,9 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/86.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/10",
-              "https://rickandmortyapi.com/api/episode/22",
-              "https://rickandmortyapi.com/api/episode/28"
+              "episode10",
+              "episode22",
+              "episode28"
           ],
           "url": "https://rickandmortyapi.com/api/character/86",
           "created": "2017-11-30T20:53:10.382Z"
@@ -2078,7 +2078,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/87.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/4"
+              "episode4"
           ],
           "url": "https://rickandmortyapi.com/api/character/87",
           "created": "2017-11-30T21:08:32.534Z"
@@ -2100,10 +2100,10 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/88.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/8",
-              "https://rickandmortyapi.com/api/episode/9",
-              "https://rickandmortyapi.com/api/episode/11",
-              "https://rickandmortyapi.com/api/episode/25"
+              "episode8",
+              "episode9",
+              "episode11",
+              "episode25"
           ],
           "url": "https://rickandmortyapi.com/api/character/88",
           "created": "2017-11-30T21:16:35.633Z"
@@ -2125,7 +2125,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/89.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/5"
+              "episode5"
           ],
           "url": "https://rickandmortyapi.com/api/character/89",
           "created": "2017-12-01T10:32:08.340Z"
@@ -2147,7 +2147,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/90.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/14"
+              "episode14"
           ],
           "url": "https://rickandmortyapi.com/api/character/90",
           "created": "2017-12-01T10:54:34.736Z"
@@ -2169,7 +2169,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/91.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/8"
+              "episode8"
           ],
           "url": "https://rickandmortyapi.com/api/character/91",
           "created": "2017-12-01T11:12:25.105Z"
@@ -2191,8 +2191,8 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/92.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/1",
-              "https://rickandmortyapi.com/api/episode/6"
+              "episode1",
+              "episode6"
           ],
           "url": "https://rickandmortyapi.com/api/character/92",
           "created": "2017-12-01T11:20:51.247Z"
@@ -2214,7 +2214,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/93.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/25"
+              "episode25"
           ],
           "url": "https://rickandmortyapi.com/api/character/93",
           "created": "2017-12-01T11:36:16.467Z"
@@ -2236,7 +2236,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/94.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/22"
+              "episode22"
           ],
           "url": "https://rickandmortyapi.com/api/character/94",
           "created": "2017-12-01T11:49:43.929Z"
@@ -2258,7 +2258,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/95.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/22"
+              "episode22"
           ],
           "url": "https://rickandmortyapi.com/api/character/95",
           "created": "2017-12-01T11:54:36.670Z"
@@ -2280,7 +2280,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/96.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/3"
+              "episode3"
           ],
           "url": "https://rickandmortyapi.com/api/character/96",
           "created": "2017-12-01T11:59:04.796Z"
@@ -2302,7 +2302,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/97.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/3"
+              "episode3"
           ],
           "url": "https://rickandmortyapi.com/api/character/97",
           "created": "2017-12-01T12:00:27.028Z"
@@ -2324,7 +2324,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/98.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/3"
+              "episode3"
           ],
           "url": "https://rickandmortyapi.com/api/character/98",
           "created": "2017-12-01T12:01:43.742Z"
@@ -2346,7 +2346,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/99.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/3"
+              "episode3"
           ],
           "url": "https://rickandmortyapi.com/api/character/99",
           "created": "2017-12-01T12:02:00.935Z"
@@ -2368,7 +2368,7 @@ export default  {
           },
           "image": "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/100.jpeg",
           "episode": [
-              "https://rickandmortyapi.com/api/episode/3"
+              "episode3"
           ],
           "url": "https://rickandmortyapi.com/api/character/100",
           "created": "2017-12-01T12:02:21.611Z"

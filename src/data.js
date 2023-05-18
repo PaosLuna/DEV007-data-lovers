@@ -110,27 +110,16 @@ function filtrarorigen(data, origen) {
 
 
 //FILTRA EPISODIOS POR PERSONAJE
-
-let apariciones = []
-
-const episodiosTotal = data.results.map(function(episodios){
-  apariciones.push(`${episodios.name} ${episodios.episode}`);
+const episodiosTotal = data.results.map(function(personaje){
+  return {nombre:personaje.name, apariciones:personaje.episode.length}
 });
-//console.log(episodiosTotal);
 
-
-
-function cantidadEpisodios(){
-  var sumaEpisodios = apariciones.length
-console.log(sumaEpisodios);
-}
-
-cantidadEpisodios();
+//console.log(episodiosTotal)
 
 
 
 
-export {filtrar1, filtrar, isalfabeto, mostrarMultiversos, filtrarorigen, cantidadEpisodios};
+export {filtrar1, filtrar, isalfabeto, mostrarMultiversos, filtrarorigen, episodiosTotal};
 
 
 

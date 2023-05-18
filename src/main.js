@@ -1,6 +1,6 @@
 import data from './data/rickandmorty/rickandmorty.js';
 console.log(data.results);
-import {filtrar1, filtrar, isalfabeto, mostrarMultiversos, filtrarorigen, cantidadEpisodios} from './data.js';
+import {filtrar1, filtrar, isalfabeto, mostrarMultiversos, filtrarorigen, episodiosTotal} from './data.js';
 
 //AQUÍ EMPIEZA NUESTRO CÓDIGO
 const seccion1 = document.getElementById("container");
@@ -41,7 +41,8 @@ headerMultiversos.addEventListener("click", ()=> {
 
 headerEpisodios.addEventListener("click", ()=> {
     abrirSeccion4()
-});
+    mostrarEpisodios(episodiosTotal)
+}); 
 //TERMINA INTERACCIÓN BOTONES HEADER 
 
 
@@ -137,7 +138,7 @@ function mostrarTodo(){
         <div class="tarjetaP" id="tarjetaP">
         <img class="imagenTarjeta" src="${todos.image}"></img>
         <p class="textoTarjeta">
-         ${todos.name} <br>
+        ${todos.name} <br>
         Estatus: ${todos.status} <br>
         Especie: ${todos.species} <br>
         Tipo: ${todos.type} <br>
@@ -257,23 +258,25 @@ const personajesmulti = document.getElementById("personajesMulti")
   });
   
 
-
 //ESTE MUESTRA LOS EPISODIOS POR PERSONAJE
-const tarjetasEpisodios = document.getElementById("tarjetasEpisodios");
-
-function mostrarEpisodios(personaje) {
-  let episodiosPersonaje = cantidadEpisodios();
-  
-}
 
 
-mostrarEpisodios(data);
 
-/*function mostrarEpisodios(data) {
-    data.results.forEach((personaje) => {
-     tarjetasEpisodios.innerHTML += `Episodios de ${personaje.name}: <br>` ;
-     personaje.episode.forEach((episodio) => {
-      tarjetasEpisodios.innerHTML += `  ${episodio}: <br>`;
-      });
+
+function mostrarEpisodios(data) {
+    const tarjetasEpisodios = document.getElementById("tarjetasEpisodios");
+
+    data.forEach((personaje) => {
+    tarjetasEpisodios.innerHTML += `
+    <div class="tarjetaP" id="tarjetaP">
+    <img class="imagenTarjeta" src="${personaje.image}"></img>
+    ${personaje.nombre},
+    <p>Apariciones:</p>
+    ${personaje.apariciones}
+    </div>`
+    //tarjetasEpisodios.innerHTML += `  ${personaje.apariciones}: <br>`;
     });
-  }*/
+  }
+
+
+  

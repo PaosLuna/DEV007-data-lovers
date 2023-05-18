@@ -1,6 +1,6 @@
 import data from './data/rickandmorty/rickandmorty.js';
 console.log(data.results);
-import {filtrar1, filtrar, isalfabeto, mostrarMultiversos, filtrarorigen} from './data.js';
+import {filtrar1, filtrar, isalfabeto, mostrarMultiversos, filtrarorigen, cantidadEpisodios} from './data.js';
 
 //AQUÍ EMPIEZA NUESTRO CÓDIGO
 const seccion1 = document.getElementById("container");
@@ -58,16 +58,19 @@ function cerrarSeccion2(){
     seccion2.style.display = 'none';
     seccion1.style.display = 'flex';
     seccion3.style.display = 'none';
+    seccion4.style.display = 'none';
     header1.style.display = 'flex';
-    header2.style.display = 'none';
+    header2.style.display = 'none'; 
 }
 
 function abrirSeccion3(){
     seccion1.style.display = 'none';
     seccion2.style.display = 'none';
     seccion3.style.display = 'block';
+    seccion4.style.display = 'none';
     header2.style.display = 'block';
     header1.style.display = 'none';
+    
 }
 
 function cerrarSeccion3(){
@@ -134,7 +137,7 @@ function mostrarTodo(){
         <div class="tarjetaP" id="tarjetaP">
         <img class="imagenTarjeta" src="${todos.image}"></img>
         <p class="textoTarjeta">
-        Nombre: ${todos.name} <br>
+         ${todos.name} <br>
         Estatus: ${todos.status} <br>
         Especie: ${todos.species} <br>
         Tipo: ${todos.type} <br>
@@ -159,7 +162,7 @@ function mostrarFiltrado(orden){
             <div class="tarjetaP" id="tarjetaP">
             <img class="imagenTarjeta" src="${todos.image}"></img>
             <p class="textoTarjeta">
-            Nombre: ${todos.name} <br>
+            ${todos.name} <br>
             Estatus: ${todos.status} <br>
             Especie: ${todos.species} <br>
             Tipo: ${todos.type} <br>
@@ -176,7 +179,7 @@ function mostrarFiltrado(orden){
             <div class="tarjetaP" id="tarjetaP">
             <img class="imagenTarjeta" src="${todos.image}"></img>
             <p class="textoTarjeta">
-            Nombre: ${todos.name} <br>
+            ${todos.name} <br>
             Estatus: ${todos.status} <br>
             Especie: ${todos.species} <br>
             Tipo: ${todos.type} <br>
@@ -238,8 +241,8 @@ const personajesmulti = document.getElementById("personajesMulti")
         personajesmulti.innerHTML += `
         <div class="tarjetaP" id="tarjetaP">
         <img class="imagenTarjeta" src="${personaje.image}"></img>
+        <h3 ${personaje.name} ><br>
         <p class="textoTarjeta">
-        Nombre: ${personaje.name} <br>
         Estatus: ${personaje.status} <br>
         Especie: ${personaje.species} <br>
         Tipo: ${personaje.type} <br>
@@ -255,44 +258,22 @@ const personajesmulti = document.getElementById("personajesMulti")
   
 
 
-/*FUNCION PARA EL CARRUSEL INTENTO 1
-const botonSiguiente = document.getElementById("button-next");
+//ESTE MUESTRA LOS EPISODIOS POR PERSONAJE
+const tarjetasEpisodios = document.getElementById("tarjetasEpisodios");
 
-botonSiguiente.addEventListener("click", ()=> {
-    App();
-})
-
-function App() {
-
-window.onload = function(event) {
-    let app = new App();
-    window.app = app;
+function mostrarEpisodios(personaje) {
+  let episodiosPersonaje = cantidadEpisodios();
+  
 }
 
-app.prototype.processingButton = function(event) {
-    const btn = event.currentTarget;
-    const carruselList = event.currentTarget.parentNode;
-    const track = event.currentTarget.parentNode.querySelector("carrusel-track");
-    const carrusel = track.querySelectorAll("carrusel");
-    const carruselWidth = carrusel[0].offsetWidth;
-    const trackWidth = track.offsetWidth;
-    const listWidth = carruselList.offsetWidth;
-    track.style.left == "" ? leftPosition = track.style.left = 0 : leftPosition = parseFloat(track.style.left.slice(0,-2) * -1);
-    btn.dataset.button == "button-prev" ? prevAction(leftPosition, carruselWidth, track) : nextAction(leftPosition, trackWidth, listWidth, carruselWidth, track);
-}
 
-let prevAction = (leftPosition, carruselWidth, track) => {
-    if(leftPosition > 0){
-        track.style.left = `${-1 * (leftPosition - carruselWidth)} px`;
-    }
-}
+mostrarEpisodios(data);
 
-let nextAction = (leftPosition, trackWidth, listWidth, carruselWidth, track) =>{
-    if(leftPosition < (trackWidth - listWidth)){
-        track.style.left = `${-1 * (leftPosition + carruselWidth)} px`;
-    }
-}
-
-}*/
-
-
+/*function mostrarEpisodios(data) {
+    data.results.forEach((personaje) => {
+     tarjetasEpisodios.innerHTML += `Episodios de ${personaje.name}: <br>` ;
+     personaje.episode.forEach((episodio) => {
+      tarjetasEpisodios.innerHTML += `  ${episodio}: <br>`;
+      });
+    });
+  }*/

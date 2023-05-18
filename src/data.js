@@ -26,6 +26,7 @@ const filtrar1 = () => {
             </p>
             </div>
             `
+            
             espacioPersonajes.style.display = 'none';
         }
     }
@@ -58,7 +59,7 @@ const filtrar = () => {
             </p>
             </div>
             `
-            espacioPersonajes.style.display = 'none';
+           espacioPersonajes.style.display = 'none'; /*oculta los primeros personajes*/
         }
     }
     if(resultado.innerHTML === ''){
@@ -92,7 +93,7 @@ function mostrarMultiversos(){
   for (let i=0; i<multiversos.length; i++){
   multiversos[i].origin.name;
   let traerMultiversos = multiversos[i].origin.name;
-  console.log(traerMultiversos);
+  //console.log(traerMultiversos);
   }
 }
 mostrarMultiversos();
@@ -106,7 +107,30 @@ function filtrarorigen(data, origen) {
 }
 
 
-export {filtrar1, filtrar, isalfabeto, mostrarMultiversos, filtrarorigen};
+
+
+//FILTRA EPISODIOS POR PERSONAJE
+
+let apariciones = []
+
+const episodiosTotal = data.results.map(function(episodios){
+  apariciones.push(`${episodios.name} ${episodios.episode}`);
+});
+//console.log(episodiosTotal);
+
+
+
+function cantidadEpisodios(){
+  var sumaEpisodios = apariciones.length
+console.log(sumaEpisodios);
+}
+
+cantidadEpisodios();
+
+
+
+
+export {filtrar1, filtrar, isalfabeto, mostrarMultiversos, filtrarorigen, cantidadEpisodios};
 
 
 

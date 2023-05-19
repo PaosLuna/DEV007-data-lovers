@@ -269,10 +269,11 @@ function mostrarEpisodios(data) {
     data.forEach((personaje) => {
     tarjetasEpisodios.innerHTML += `
     <div class="tarjetaP" id="tarjetaP">
-    <img class="imagenTarjeta" src="${personaje.image}"></img>
+    <img class="imagenTarjeta" src="${personaje.imagen}"></img>
     ${personaje.nombre},
-    <p>Apariciones:</p>
+    <p>Apariciones:
     ${personaje.apariciones}
+    </p>
     </div>`
     //tarjetasEpisodios.innerHTML += `  ${personaje.apariciones}: <br>`;
     });

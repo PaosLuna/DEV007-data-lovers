@@ -17,7 +17,6 @@ const headerEpisodios = document.getElementById("headerEpisodios");
 const headerMultiversos = document.getElementById("headerMultiversos");
 //TERMINA BOTONES HEADER 
 
-const espacioPersonajes = document.getElementById("personajes");
 seccion2.style.display = 'none';
 seccion3.style.display = 'none';
 seccion4.style.display = 'none';
@@ -117,16 +116,56 @@ botonMultiversos.addEventListener("click", ()=> {
     //mostrarFiltrado2();
 });
 
-
+//BUSCADORES
+const buscador1 = document.getElementById("buscador1");
+const resultado = document.querySelector('#resultado');
+const espacioPersonajes = document.getElementById("personajes");
 
 //DA INTERACCIÓN A LOS BUSCADORES
-const botonBuscador = document.getElementById("botonBuscador");
-botonBuscador.addEventListener("click", filtrar)
-const botonBuscar = document.getElementById("botonBuscar");
+const botonBuscador = document.getElementById("botonBuscador");/*SECCIÓN2*/
+const botonBuscar = document.getElementById("botonBuscar");/*SECCIÓN1*/
+
+botonBuscador.addEventListener("click",() => {
+    console.log('BUSCADOR-DOS')
+    filtrar()
+} )
 botonBuscar.addEventListener ("click", event => {
-    filtrar1();
+    resultado.innerHTML = '';
+    const texto1 = buscador1.value.toLowerCase();
+    console.log('FILTRAR-UNO')
+    //filtrar1(texto);
     cerrarSeccion1();
+    mostrarBuscador(texto1)
 })
+
+
+function mostrarBuscador(texto1){
+    let personajes = filtrar1(texto1);
+    if (personajes.length > 0) {
+        personajes.forEach(personaje => {
+            resultado.innerHTML += `
+            <div class="tarjetaP" id="tarjetaP">
+            <img class="imagenTarjeta" src="${personaje.image}"></img>
+            <p class="textoTarjeta">
+            Nombre: ${personaje.name} <br>
+            Estatus: ${personaje.status} <br>
+            Especie: ${personaje.species} <br>
+            Tipo: ${personaje.type} <br>
+            Genero: ${personaje.gender} <br>
+            Origen: ${personaje.origin.name} <br>
+            Locación: ${personaje.location.name}
+            </p>
+            </div>
+            `
+            espacioPersonajes.style.display = 'none';
+        })
+    
+        } else{
+        resultado.innerHTML += `
+        <li>Personaje no encontrado</li>
+        `
+    }
+}
 
 
 
@@ -258,23 +297,20 @@ const personajesmulti = document.getElementById("personajesMulti")
   });
   
 
+
+
 //ESTE MUESTRA LOS EPISODIOS POR PERSONAJE
-
-
-
-
 function mostrarEpisodios(data) {
     const tarjetasEpisodios = document.getElementById("tarjetasEpisodios");
 
     data.forEach((personaje) => {
     tarjetasEpisodios.innerHTML += `
     <div class="tarjetaP" id="tarjetaP">
-    <img class="imagenTarjeta" src="${personaje.image}"></img>
+    <img class="imagenTarjeta" src="${personaje.imagen}"></img>
     ${personaje.nombre},
     <p>Apariciones:</p>
     ${personaje.apariciones}
     </div>`
-    //tarjetasEpisodios.innerHTML += `  ${personaje.apariciones}: <br>`;
     });
   }
 

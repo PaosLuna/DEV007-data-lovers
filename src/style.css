@@ -436,3 +436,14 @@ input {
   margin: 0 auto;
   padding: 60px;
 }
+
+#tarjetasEpisodios{
+  display: flex;
+  justify-content: space-around;
+  align-content: space-around;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}

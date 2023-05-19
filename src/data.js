@@ -1,44 +1,21 @@
 import data from './data/rickandmorty/rickandmorty.js';
 
  
-const buscador1 = document.getElementById("buscador1");
-const resultado = document.querySelector('#resultado');
-const espacioPersonajes = document.getElementById("personajes");
-
 //BUSCADOR1
-const filtrar1 = () => {
-    resultado.innerHTML = '';
-    const texto = buscador1.value.toLowerCase();
+const filtrar1 = (texto1) => {
+  const personajes = [];
     for (let personaje of data.results) {
-        let nombre = personaje.name.toLowerCase();
-        if (nombre.indexOf(texto) !== -1){
-            resultado.innerHTML += `
-            <div class="tarjetaP" id="tarjetaP">
-            <img class="imagenTarjeta" src="${personaje.image}"></img>
-            <p class="textoTarjeta">
-            Nombre: ${personaje.name} <br>
-            Estatus: ${personaje.status} <br>
-            Especie: ${personaje.species} <br>
-            Tipo: ${personaje.type} <br>
-            Genero: ${personaje.gender} <br>
-            Origen: ${personaje.origin.name} <br>
-            Locación: ${personaje.location.name}
-            </p>
-            </div>
-            `
-            
-            espacioPersonajes.style.display = 'none';
-        }
-    }
-    if(resultado.innerHTML === ''){
-        resultado.innerHTML += `
-        <li>Personaje no encontrado</li>
-        `
-    }
+      let nombre = personaje.name.toLowerCase();
+        if (nombre.indexOf(texto1) !== -1){
+          personajes.push(personaje)
+        }      
+}
+return personajes
 }
 
 //BUSCADOR2
 const buscadorDos = document.getElementById("buscadorDos");
+const espacioPersonajes = document.getElementById("personajes");
 const filtrar = () => {
     resultado.innerHTML = '';
     const texto = buscadorDos.value.toLowerCase();
@@ -107,14 +84,10 @@ function filtrarorigen(data, origen) {
 }
 
 
-
-
 //FILTRA EPISODIOS POR PERSONAJE
 const episodiosTotal = data.results.map(function(personaje){
-  return {nombre:personaje.name, apariciones:personaje.episode.length}
+  return {imagen:personaje.image, nombre:personaje.name, apariciones:personaje.episode.length}
 });
-
-//console.log(episodiosTotal)
 
 
 

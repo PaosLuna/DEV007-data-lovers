@@ -436,11 +436,25 @@ input {
 }
 
 .episodios {
+  position: relative;
   color: #000000;
   font-size: 30px;
   text-align: center;
   letter-spacing: 3px;
   max-width: fit-content;
   margin: 0 auto;
-  padding: 60px;
+  padding-top: 150px;
+}
+
+#tarjetasEpisodios {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-content: space-around;
+  /*background-color: #FF0000;*/
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 50px;
 }

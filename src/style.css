@@ -245,6 +245,19 @@ input {
   border-radius: 15px;
 }
 
+.titulotarjetas {
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.textotarjetaepisodios {
+  text-align: center;
+  margin: 0px 0px 0px 10px;
+  font-weight: 0;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
 .textoTarjeta {
   margin: 0px 0px 0px 10px;
   font-weight: 0;

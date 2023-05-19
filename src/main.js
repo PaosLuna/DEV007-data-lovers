@@ -131,14 +131,14 @@ botonBuscar.addEventListener ("click", event => {
 
 
 //MOSTRAR TODOS LOS PERSONAJES SIN FILTRO
-function mostrarTodo(){
+function mostrarTodo() {
     for (let todos of data.results){
         //console.log(todos);
         espacioPersonajes.innerHTML += `
         <div class="tarjetaP" id="tarjetaP">
         <img class="imagenTarjeta" src="${todos.image}"></img>
+        <h4 class="titulotarjetas">${todos.name}</h4>
         <p class="textoTarjeta">
-        ${todos.name} <br>
         Estatus: ${todos.status} <br>
         Especie: ${todos.species} <br>
         Tipo: ${todos.type} <br>
@@ -152,7 +152,7 @@ function mostrarTodo(){
 }
 
 //FUNCION DE PRUEBA PARA UNIFICAR
-/*function mostrarTodo(){
+/*function mostrargeneral(){
     for (let todos of data.results){
         //console.log(todos);
         espacioPersonajes.innerHTML += `
@@ -183,8 +183,8 @@ function mostrarFiltrado(orden){
             espacioPersonajes.innerHTML += `
             <div class="tarjetaP" id="tarjetaP">
             <img class="imagenTarjeta" src="${todos.image}"></img>
+            <h4 class="titulotarjetas">${todos.name}</h4>
             <p class="textoTarjeta">
-            ${todos.name} <br>
             Estatus: ${todos.status} <br>
             Especie: ${todos.species} <br>
             Tipo: ${todos.type} <br>
@@ -200,8 +200,8 @@ function mostrarFiltrado(orden){
             espacioPersonajes.innerHTML += `
             <div class="tarjetaP" id="tarjetaP">
             <img class="imagenTarjeta" src="${todos.image}"></img>
+            <h4 class="titulotarjetas">${todos.name}</h4>
             <p class="textoTarjeta">
-            ${todos.name} <br>
             Estatus: ${todos.status} <br>
             Especie: ${todos.species} <br>
             Tipo: ${todos.type} <br>
@@ -263,7 +263,7 @@ const personajesmulti = document.getElementById("personajesMulti")
         personajesmulti.innerHTML += `
         <div class="tarjetaP" id="tarjetaP">
         <img class="imagenTarjeta" src="${personaje.image}"></img>
-        <h3 ${personaje.name} ><br>
+        <h4 class="titulotarjetas">${personaje.name}</h4>
         <p class="textoTarjeta">
         Estatus: ${personaje.status} <br>
         Especie: ${personaje.species} <br>
@@ -291,10 +291,13 @@ function mostrarEpisodios(data) {
     tarjetasEpisodios.innerHTML += `
     <div class="tarjetaP" id="tarjetaP">
     <img class="imagenTarjeta" src="${personaje.imagen}"></img>
-    ${personaje.nombre},
-    <p>Apariciones:
+    <h4 class="titulotarjetas">${personaje.nombre}</h4>,
+    <p class="textotarjetaepisodios">
+    Apariciones en la serie:
     ${personaje.apariciones}
     </p>
+    <p class="textoTarjeta"> 
+    ${personaje.episodio}</p>
     </div>`
     //tarjetasEpisodios.innerHTML += `  ${personaje.apariciones}: <br>`;
     });

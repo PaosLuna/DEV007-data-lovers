@@ -15,8 +15,8 @@ const filtrar1 = () => {
             resultado.innerHTML += `
             <div class="tarjetaP" id="tarjetaP">
             <img class="imagenTarjeta" src="${personaje.image}"></img>
+            <h4 class="titulotarjetas">${personaje.name}</h4>
             <p class="textoTarjeta">
-            Nombre: ${personaje.name} <br>
             Estatus: ${personaje.status} <br>
             Especie: ${personaje.species} <br>
             Tipo: ${personaje.type} <br>
@@ -48,8 +48,8 @@ const filtrar = () => {
             resultado.innerHTML += `
             <div class="tarjetaP" id="tarjetaP">
             <img class="imagenTarjeta" src="${personaje.image}"></img>
+            <h4 class="titulotarjetas">${personaje.name}</h4>
             <p class="textoTarjeta">
-            Nombre: ${personaje.name} <br>
             Estatus: ${personaje.status} <br>
             Especie: ${personaje.species} <br>
             Tipo: ${personaje.type} <br>
@@ -111,7 +111,7 @@ function filtrarorigen(data, origen) {
 
 //FILTRA EPISODIOS POR PERSONAJE
 const episodiosTotal = data.results.map(function(personaje){
-  return {imagen:personaje.image, nombre:personaje.name, apariciones:personaje.episode.length}
+  return {imagen:personaje.image, nombre:personaje.name, apariciones:personaje.episode.length, episodio:personaje.episode}
 });
 
 //console.log(episodiosTotal)

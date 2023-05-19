@@ -111,7 +111,7 @@ function filtrarorigen(data, origen) {
 
 //FILTRA EPISODIOS POR PERSONAJE
 const episodiosTotal = data.results.map(function(personaje){
-  return {nombre:personaje.name, apariciones:personaje.episode.length}
+  return {imagen:personaje.image, nombre:personaje.name, apariciones:personaje.episode.length}
 });
 
 //console.log(episodiosTotal)

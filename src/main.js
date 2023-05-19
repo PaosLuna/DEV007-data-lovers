@@ -151,6 +151,27 @@ function mostrarTodo(){
     }
 }
 
+//FUNCION DE PRUEBA PARA UNIFICAR
+/*function mostrarTodo(){
+    for (let todos of data.results){
+        //console.log(todos);
+        espacioPersonajes.innerHTML += `
+        <div class="tarjetaP" id="tarjetaP">
+        <img class="imagenTarjeta" src="${todos.image}"></img>
+        <p class="textoTarjeta">
+        ${todos.name} <br>
+        Estatus: ${todos.status} <br>
+        Especie: ${todos.species} <br>
+        Tipo: ${todos.type} <br>
+        Genero: ${todos.gender} <br>
+        Origen: ${todos.origin.name} <br>
+        Locación: ${todos.location.name}
+        </p>
+        </div>
+        `
+    }
+}*/
+
 
 //MOSTRAR FILTRO ABC
 function mostrarFiltrado(orden){

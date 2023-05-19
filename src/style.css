@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 * {
   box-sizing: border-box;
@@ -16,6 +16,7 @@ body {
   background-attachment: fixed;
   background-position: 50% 75%;
   margin: 0px;
+  font-family: 'Bebas Neue', sans-serif;
 }
 
 
@@ -99,7 +100,6 @@ body {
 
 .buscador {
   position: relative;
-  font-family: 'Courier New', Courier, monospace;
   color: rgb(254, 254, 255);
   text-align: center;
 }
@@ -190,11 +190,11 @@ input {
 }
 
 .frase {
-  font-family: Georgia, 'Times New Roman', Times, serif;
   color: #7AE868;
   font-size: 30px;
   text-align: center;
   letter-spacing: 3px;
+  font-family: 'Bebas Neue', sans-serif;
 }
 
 
@@ -207,9 +207,8 @@ input {
 
 .tituloPersonajes {
   /*font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;*/
-  font-family: 'Creepster', cursive;
   color: #000000;
-  font-size: 40px;
+  font-size: 30px;
   text-align: center;
   letter-spacing: 3px;
   align-items: center;
@@ -270,15 +269,13 @@ input {
 }
 
 .multiversos {
- /*font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;*/
-  font-family: 'Creepster', cursive;
   color: #000000;
-  font-size: X-large;
+  font-size: 30px;
   text-align: center;
   letter-spacing: 3px;
   max-width: fit-content;
   margin: 0 auto;
-  padding: 60px;
+  padding: 20px;
 }
 
 #botonesmultiverso {
@@ -426,10 +423,8 @@ input {
 }
 
 .episodios {
- /*font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;*/
-  font-family: 'Creepster', cursive;
   color: #000000;
-  font-size: X-large;
+  font-size: 30px;
   text-align: center;
   letter-spacing: 3px;
   max-width: fit-content;

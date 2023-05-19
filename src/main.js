@@ -1,8 +1,8 @@
 import data from './data/rickandmorty/rickandmorty.js';
 console.log(data.results);
-import {filtrar1, filtrar, isalfabeto, mostrarMultiversos, filtrarorigen, episodiosTotal} from './data.js';
+import {filtrar1, filtrar2, isalfabeto, filtrarorigen, episodiosTotal} from './data.js';
 
-//AQUÍ EMPIEZA NUESTRO CÓDIGO
+/*----------------------------------------------------AQUÍ EMPIEZA MANEJO DE SECCIONES-------------------------------------------------*/
 const seccion1 = document.getElementById("container");
 const seccion2 = document.getElementById("seccion2");
 const seccion3 = document.getElementById("seccion3");
@@ -99,6 +99,7 @@ function cerrarSeccion4(){
     header2.style.display = 'none';
 }
 
+/*----------------------------------------------------AQUÍ TERMINA MANEJO DE SECCIONES-------------------------------------------------*/
 
 
 //CIERRA SECCIÓN 1 Y ABRE LA 2
@@ -116,6 +117,7 @@ botonMultiversos.addEventListener("click", ()=> {
     //mostrarFiltrado2();
 });
 
+/*----------------------------------------------------AQUÍ EMPIEZA MANEJO BUSCADORES-----------------------------------------------*/
 //BUSCADORES
 const buscador1 = document.getElementById("buscador1");
 const resultado = document.querySelector('#resultado');
@@ -124,16 +126,16 @@ const espacioPersonajes = document.getElementById("personajes");
 //DA INTERACCIÓN A LOS BUSCADORES
 const botonBuscador = document.getElementById("botonBuscador");/*SECCIÓN2*/
 const botonBuscar = document.getElementById("botonBuscar");/*SECCIÓN1*/
+const buscadorDos = document.getElementById("buscadorDos");
 
 botonBuscador.addEventListener("click",() => {
-    console.log('BUSCADOR-DOS')
-    filtrar()
+    resultado.innerHTML = '';
+    const texto2 = buscadorDos.value.toLowerCase();
+    mostrarBuscador2(texto2)
 } )
 botonBuscar.addEventListener ("click", event => {
     resultado.innerHTML = '';
     const texto1 = buscador1.value.toLowerCase();
-    console.log('FILTRAR-UNO')
-    //filtrar1(texto);
     cerrarSeccion1();
     mostrarBuscador(texto1)
 })
@@ -167,6 +169,35 @@ function mostrarBuscador(texto1){
     }
 }
 
+function mostrarBuscador2(texto2){
+    let personajes = filtrar2(texto2);
+    if (personajes.length > 0) {
+        personajes.forEach(personaje => {
+            resultado.innerHTML += `
+            <div class="tarjetaP" id="tarjetaP">
+            <img class="imagenTarjeta" src="${personaje.image}"></img>
+            <p class="textoTarjeta">
+            Nombre: ${personaje.name} <br>
+            Estatus: ${personaje.status} <br>
+            Especie: ${personaje.species} <br>
+            Tipo: ${personaje.type} <br>
+            Genero: ${personaje.gender} <br>
+            Origen: ${personaje.origin.name} <br>
+            Locación: ${personaje.location.name}
+            </p>
+            </div>
+            `
+            espacioPersonajes.style.display = 'none';
+        })
+    
+        } else{
+        resultado.innerHTML += `
+        <li>Personaje no encontrado</li>
+        `
+    }
+}
+
+/*----------------------------------------------------AQUÍ TERMINA MANEJO BUSCADORES-----------------------------------------------*/
 
 
 //MOSTRAR TODOS LOS PERSONAJES SIN FILTRO
@@ -189,27 +220,6 @@ function mostrarTodo() {
         `
     }
 }
-
-//FUNCION DE PRUEBA PARA UNIFICAR
-/*function mostrargeneral(){
-    for (let todos of data.results){
-        //console.log(todos);
-        espacioPersonajes.innerHTML += `
-        <div class="tarjetaP" id="tarjetaP">
-        <img class="imagenTarjeta" src="${todos.image}"></img>
-        <p class="textoTarjeta">
-        ${todos.name} <br>
-        Estatus: ${todos.status} <br>
-        Especie: ${todos.species} <br>
-        Tipo: ${todos.type} <br>
-        Genero: ${todos.gender} <br>
-        Origen: ${todos.origin.name} <br>
-        Locación: ${todos.location.name}
-        </p>
-        </div>
-        `
-    }
-}*/
 
 
 //MOSTRAR FILTRO ABC
@@ -254,7 +264,7 @@ function mostrarFiltrado(orden){
     }
 }
 
-//SELECTOR POR ALFABETO 
+//SELECTOR A-Z Y Z-A
 const selectorAbc = document.getElementById("selector1");
 selectorAbc.addEventListener("change", function(){
     const seleccionado = selectorAbc.value;
@@ -268,7 +278,7 @@ selectorAbc.addEventListener("change", function(){
 });
 
 
-/*FUNCION PARA EL CARRUSEL INTENTO 2*/
+//FUNCION PARA EL CARRUSEL 
 const grande = document.querySelector('.grande');
 const punto = document.querySelectorAll('.punto');
 
@@ -286,7 +296,6 @@ punto.forEach( ( cadaPunto ,  i )=> {
         punto[i].classList.add('activo')
     })
 })
-
 
 
 //FILTRA PERSONAJES POR MULTIVERSOS

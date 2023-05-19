@@ -10,42 +10,39 @@
 </head>
 
 <body>
-
+  <!--HEADER SECCIÓN PRINCIPAL-->
   <header class="header1" id="header1">
     <img class="logorm" src="./imagenes/logorm.png" alt="Logo Rick and Morty">
   </header>
 
-  <!--1.CONTENEDOR PRINCIPAL-->
+  <!----------------------------------------------------------1. SECCIÓN PRINCIPAL-------------------------------------------------->
   <section class="container" id="container">
-    <!--1.1IMAGEN DE PORTADA-->
+    <!--IMAGEN DE PORTADA (LADO IZQ)-->
     <div class="imagenP1rm">
       <img class="portadarm" src="./imagenes/portadarm.png" alt="Imagen Rick and Morty">
     </div>
-    <!--1.2EMPIEZA SECCIÓN CON TODOS LOS ELEMENTOS DE INICIO-->
+    <!--EMPIEZA SECCIÓN CON TODOS LOS ELEMENTOS DE INICIO (LADO DERECHO)-->
     <div class="infoportada">
-      <div class="imagenP2rm"> <!--1.2.1-->
+      <div class="imagenP2rm"> 
         <img class="nombrerm" src="./imagenes/nombrerm.png" alt="Nombre Rick and Morty">
       </div>
-      <div class="buscador"> <!--1.2.2-->
+      <div class="buscador"> 
         <label>Busca tus personajes</label>
         <br>
         <input type="search" placeholder="Buscar" id="buscador1">
         <button id="botonBuscar" class="botonBuscar">VAMOS</button>
       </div>
-      <div class="botones"> <!--1.2.3-->
+      <div class="botones"> 
         <button class="botonGrande" id="botonMultiversos">MULTIVERSOS</button>
         <button class="botonGrande" id="botonTodos">TODOS</button>
       </div>
-      <div class="frase"> <!--1.2.4-->
+      <div class="frase"> 
         <h1>!!Wubba Lubba Dub Dub!!</h1>
       </div>
     </div>
   </section>
 
-
-  <!--2.SECCIÓN DOS-->
-
-  <!--HEADER-->
+  <!--HEADER PARA TODAS LAS SECCIONES, EXCEPTO LA 1-->
   <header class="headerPrueba" id="header2">
     <div class="contenedorheader">
       <img class="logorm2" src="./imagenes/logorm2.png" alt="Logo Rick and Morty">
@@ -61,6 +58,7 @@
   </header>
   <!--FIN HEADER-->
 
+<!----------------------------------------------------------1. SECCIÓN 2 (PERSONAJES)------------------------------------------------>
   <section id="seccion2">
     <div class="tituloPersonajes">
       <br>
@@ -71,32 +69,30 @@
     </div>
 
 
-    <!--BUSCADOR PAG2-->
+    <!--CONTENEDOR DE BOTONES-->
     <div class="buscador2">
-      <!--SELECTOR POR LETRAS PARA FILTRO A-Z-->
+
+      <!--SELECTOR PARA FILTRO A-Z-->
       <select name="porLetra" id="selector1" class="selector1">
         <option disabled selected>A-Z</option>
         <option id="selectorAZ" value="ascendente">A-Z</option>
         <option id="selectorZA" value="descendente">Z-A</option>
       </select>
-
+      <!--BUSCADOR PAG2-->
       <input type="search" placeholder="Busca tu personaje" id="buscadorDos">
       <button class="botonBuscar" id="botonBuscador">BUSCAR</button>
-      <!--<button class="botonBuscar" id="botonInicio">INICIO</button> <br>-->
-      
-
     </div>
 
     <div id="resultado" class="resultado">
     </div>
 
-    <!--EMPIEZA NUESTRA DATA-->
+    <!--EMPIEZA A MOSTRAR NUESTRA DATA-->
     <div id="personajes" class="wrapper">
     </div>
     </div>
   </section>
 
-  <!--3.SECCIÓN TRES-->
+  <!----------------------------------------------------------1. SECCIÓN 3 (MULTIVERSOS)----------------------------------------------->
   <section id="seccion3">
     <div class="multiversos">
       <br>
@@ -106,10 +102,8 @@
       <h3>Los multiversos son infinitos, pero aquí encontrarás los que más veces se han presentado en la serie</h3>
     </div>
 
-    <!--EMPIEZA CARRUSEL INTENTO 2-->
+    <!--EMPIEZA CARRUSEL-->
     <div class="carrusel">
-      
-
       <div class="grande">
         <input type="image" src="./imagenes/multiversostarjetas/Abadango.jpg" alt="Abadango" class="tarjetamultiverso">
         <input type="image" src="./imagenes/multiversostarjetas/Anatomy park.jpg" alt="Anatomy Park" class="tarjetamultiverso">
@@ -135,7 +129,7 @@
         <input type="image" src="./imagenes/multiversostarjetas/Unknown.jpg" alt="unknown" class="tarjetamultiverso">
       </div>
 
-      <ul class="puntos">
+      <ul class="puntos"> <!--BOTONES PARA RECORRER EL CARRUSEL-->
         <li class="punto activo"></li>
         <li class="punto activo"></li>
         <li class="punto activo"></li>
@@ -144,26 +138,23 @@
       </ul>
     </div>
 
-
+    <!--EMPIEZA A MOSTRARSE NUESTRA DATA-->
     <div id="personajesMulti" class="wrapper">
 
     </div>
 
   </section>
 
-  <!--4.SECCIÓN CUATRO EPISODIOS-->
+  <!----------------------------------------------------------1. SECCIÓN 4 (EPISODIOS)----------------------------------------------->
 
   <section id="seccion4">
   <div class="episodios">
     <h1>EPISODIOS</h1><br>
   </div>
   
+  <!--EMPIEZA A MOSTRARSE NUESTRA DATA-->
   <div id="tarjetasEpisodios" class="wrapper">
   </div>
-
-
-
-
 
   </section>
   

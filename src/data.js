@@ -14,39 +14,19 @@ return personajes
 }
 
 //BUSCADOR2
-const buscadorDos = document.getElementById("buscadorDos");
-const espacioPersonajes = document.getElementById("personajes");
-const filtrar = () => {
-    resultado.innerHTML = '';
-    const texto = buscadorDos.value.toLowerCase();
+const filtrar2 = (texto2) => {
+  const personajes = [];
     for (let personaje of data.results) {
-        let nombre = personaje.name.toLowerCase();
-        if (nombre.indexOf(texto) !== -1){
-            resultado.innerHTML += `
-            <div class="tarjetaP" id="tarjetaP">
-            <img class="imagenTarjeta" src="${personaje.image}"></img>
-            <h4 class="titulotarjetas">${personaje.name}</h4>
-            <p class="textoTarjeta">
-            Estatus: ${personaje.status} <br>
-            Especie: ${personaje.species} <br>
-            Tipo: ${personaje.type} <br>
-            Genero: ${personaje.gender} <br>
-            Origen: ${personaje.origin.name} <br>
-            Locación: ${personaje.location.name}
-            </p>
-            </div>
-            `
-           espacioPersonajes.style.display = 'none'; /*oculta los primeros personajes*/
-        }
-    }
-    if(resultado.innerHTML === ''){
-        resultado.innerHTML += `
-        <li>Personaje no encontrado</li>
-        `
-    }
+      let nombre = personaje.name.toLowerCase();
+        if (nombre.indexOf(texto2) !== -1){
+          personajes.push(personaje)
+        }      
+}
+return personajes
 }
 
-//FILTRO DE LETRAS
+
+//FILTRO DE A-Z
 let isalfabeto = (orden, upward) => {
 let dataAlfabeto = data.results.slice();
 dataAlfabeto.sort((a,b) =>{
@@ -62,18 +42,6 @@ if(nombreA>nombreB){
 })
 return dataAlfabeto
 }
-
-
-//FILTRA POR MULTIVERSOS
-function mostrarMultiversos(){
-  const multiversos = data.results;
-  for (let i=0; i<multiversos.length; i++){
-  multiversos[i].origin.name;
-  let traerMultiversos = multiversos[i].origin.name;
-  //console.log(traerMultiversos);
-  }
-}
-mostrarMultiversos();
 
 
 //FILTRA PERSONAJES POR MULTIVERSO
@@ -92,7 +60,7 @@ const episodiosTotal = data.results.map(function(personaje){
 
 
 
-export {filtrar1, filtrar, isalfabeto, mostrarMultiversos, filtrarorigen, episodiosTotal};
+export {filtrar1, filtrar2, isalfabeto, filtrarorigen, episodiosTotal};
 
 
 

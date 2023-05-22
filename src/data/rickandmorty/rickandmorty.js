@@ -242,7 +242,7 @@ export default {
         },
         {
             "id": 6,
-            "name": "Abadango Cluster Princess",
+            "name": "Abadango Princess",
             "status": "Alive",
             "species": "Alien",
             "type": "",

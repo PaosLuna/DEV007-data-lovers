@@ -1,6 +1,6 @@
 import data from './data/rickandmorty/rickandmorty.js';
 console.log(data.results);
-import {filtrar1, filtrar2, isalfabeto, filtrarorigen, episodiosTotal} from './data.js';
+import { filtrar1, filtrar2, isalfabeto, filtrarorigen, episodiosTotal } from './data.js';
 
 /*----------------------------------------------------AQUÍ EMPIEZA MANEJO DE SECCIONES-------------------------------------------------*/
 const seccion1 = document.getElementById("container");
@@ -24,56 +24,54 @@ header2.style.display = 'none';
 
 
 //INTERACCIÓN BOTONES HEADER 
-headerInicio.addEventListener("click", ()=> {
+headerInicio.addEventListener("click", () => {
     cerrarSeccion2()
     cerrarSeccion3()
     cerrarSeccion4()
-});    
-headerPersonajes.addEventListener("click", ()=> {
+});
+headerPersonajes.addEventListener("click", () => {
     cerrarSeccion3()
     cerrarSeccion1()
-});    
-
-headerMultiversos.addEventListener("click", ()=> {  
+});
+headerMultiversos.addEventListener("click", () => {
     abrirSeccion3()
-});    
-
-headerEpisodios.addEventListener("click", ()=> {
+});
+headerEpisodios.addEventListener("click", () => {
     abrirSeccion4()
     mostrarEpisodios(episodiosTotal)
-}); 
+});
 //TERMINA INTERACCIÓN BOTONES HEADER 
 
 
-
-function cerrarSeccion1(){
+function cerrarSeccion1() {
     seccion1.style.display = 'none';
     seccion2.style.display = 'block';
     seccion3.style.display = 'none';
+    seccion4.style.display = 'none';
     header2.style.display = 'block';
     header1.style.display = 'none';
 }
 
-function cerrarSeccion2(){
+function cerrarSeccion2() {
     seccion2.style.display = 'none';
     seccion1.style.display = 'flex';
     seccion3.style.display = 'none';
     seccion4.style.display = 'none';
     header1.style.display = 'flex';
-    header2.style.display = 'none'; 
+    header2.style.display = 'none';
 }
 
-function abrirSeccion3(){
+function abrirSeccion3() {
     seccion1.style.display = 'none';
     seccion2.style.display = 'none';
     seccion3.style.display = 'block';
     seccion4.style.display = 'none';
     header2.style.display = 'block';
     header1.style.display = 'none';
-    
+
 }
 
-function cerrarSeccion3(){
+function cerrarSeccion3() {
     seccion2.style.display = 'none';
     seccion1.style.display = 'flex';
     seccion3.style.display = 'none';
@@ -81,7 +79,7 @@ function cerrarSeccion3(){
     header2.style.display = 'none';
 }
 
-function abrirSeccion4(){
+function abrirSeccion4() {
     seccion1.style.display = 'none';
     seccion2.style.display = 'none';
     seccion3.style.display = 'none';
@@ -90,7 +88,7 @@ function abrirSeccion4(){
     header1.style.display = 'none';
 }
 
-function cerrarSeccion4(){
+function cerrarSeccion4() {
     seccion2.style.display = 'none';
     seccion1.style.display = 'flex';
     seccion3.style.display = 'none';
@@ -101,96 +99,121 @@ function cerrarSeccion4(){
 
 /*----------------------------------------------------AQUÍ TERMINA MANEJO DE SECCIONES-------------------------------------------------*/
 
-
 //CIERRA SECCIÓN 1 Y ABRE LA 2
 const botonTodos = document.getElementById("botonTodos");
-botonTodos.addEventListener("click", ()=> {
+botonTodos.addEventListener("click", () => {
     cerrarSeccion1();
     mostrarTodo();
 });
 
 //CIERRA SECCIÓN 1 Y ABRE LA 3
 const botonMultiversos = document.getElementById("botonMultiversos");
-botonMultiversos.addEventListener("click", ()=> {
+botonMultiversos.addEventListener("click", () => {
     abrirSeccion3();
     mostrarTodo();
     //mostrarFiltrado2();
 });
 
 /*----------------------------------------------------AQUÍ EMPIEZA MANEJO BUSCADORES-----------------------------------------------*/
+
 //BUSCADORES
 const buscador1 = document.getElementById("buscador1");
 const resultado = document.querySelector('#resultado');
 const espacioPersonajes = document.getElementById("personajes");
 
 //DA INTERACCIÓN A LOS BUSCADORES
-const botonBuscador = document.getElementById("botonBuscador");/*SECCIÓN2*/
-const botonBuscar = document.getElementById("botonBuscar");/*SECCIÓN1*/
+const botonBuscar = document.getElementById("botonBuscar");/*SECCIÓN-1*/
+const botonBuscador = document.getElementById("botonBuscador");/*SECCIÓN-2*/
 const buscadorDos = document.getElementById("buscadorDos");
 
-botonBuscador.addEventListener("click",() => {
-    resultado.innerHTML = '';
-    const texto2 = buscadorDos.value.toLowerCase();
-    mostrarBuscador2(texto2)
-} )
-botonBuscar.addEventListener ("click", event => {
+botonBuscar.addEventListener("click", event => { /*SECCIÓN-1*/
     resultado.innerHTML = '';
     const texto1 = buscador1.value.toLowerCase();
+    buscador1.value = '';
     cerrarSeccion1();
     mostrarBuscador(texto1)
 })
 
+botonBuscador.addEventListener("click", () => { /*SECCIÓN-2*/
+    resultado.innerHTML = '';
+    const texto2 = buscadorDos.value.toLowerCase();
+    mostrarBuscador2(texto2)
+    buscadorDos.value = '';
+})
 
-function mostrarBuscador(texto1){
+function mostrarBuscador(texto1) { /*SECCIÓN-1*/
+    resultado.innerHTML = '';
     let personajes = filtrar1(texto1);
     if (personajes.length > 0) {
         personajes.forEach(personaje => {
             resultado.innerHTML += `
-            <div class="tarjetaP" id="tarjetaP">
-            <img class="imagenTarjeta" src="${personaje.image}"></img>
-            <p class="textoTarjeta">
-            Nombre: ${personaje.name} <br>
-            Estatus: ${personaje.status} <br>
-            Especie: ${personaje.species} <br>
-            Tipo: ${personaje.type} <br>
-            Genero: ${personaje.gender} <br>
-            Origen: ${personaje.origin.name} <br>
-            Locación: ${personaje.location.name}
-            </p>
-            </div>
-            `
-            espacioPersonajes.style.display = 'none';
+        <div class="tarjetaP" id="tarjetaP"> 
+        <div class="cardCompleta" id="cardCompleta">
+        <div class="tarjetaFrente" id="tarjetaFrente">
+        <div class="bg"></div>
+        <div class="body_tarjetaFrente" id="body_tarjetaFrente">
+        <img class="imagenTarjeta" src="${personaje.image}"></img> <br>
+        <h4 class="titulotarjetas">${personaje.name}</h4>
+        </div>
+        </div>
+        <div class="tarjetaAtras" id="tarjetaAtras">
+        <div class="body_tarjetaAtras" id="body_tarjetaAtras">
+        <p class="textoTarjeta">
+        Estatus: ${personaje.status} <br>
+        Especie: ${personaje.species} <br>
+        Tipo: ${personaje.type} <br>
+        Genero: ${personaje.gender} <br>
+        Origen: ${personaje.origin.name} <br>
+        Locación: ${personaje.location.name}
+        </p>
+        </div>
+        </div>
+        </div>
+        </div>
+        `
+            espacioPersonajes.style.display = 'none'
         })
-    
-        } else{
+
+    } else {
         resultado.innerHTML += `
         <li>Personaje no encontrado</li>
         `
     }
 }
 
-function mostrarBuscador2(texto2){
+function mostrarBuscador2(texto2) { /*SECCIÓN-2*/
     let personajes = filtrar2(texto2);
     if (personajes.length > 0) {
         personajes.forEach(personaje => {
             resultado.innerHTML += `
-            <div class="tarjetaP" id="tarjetaP">
-            <img class="imagenTarjeta" src="${personaje.image}"></img>
-            <p class="textoTarjeta">
-            Nombre: ${personaje.name} <br>
-            Estatus: ${personaje.status} <br>
-            Especie: ${personaje.species} <br>
-            Tipo: ${personaje.type} <br>
-            Genero: ${personaje.gender} <br>
-            Origen: ${personaje.origin.name} <br>
-            Locación: ${personaje.location.name}
-            </p>
-            </div>
-            `
+        <div class="tarjetaP" id="tarjetaP"> 
+        <div class="cardCompleta" id="cardCompleta">
+        <div class="tarjetaFrente" id="tarjetaFrente">
+        <div class="bg"></div>
+        <div class="body_tarjetaFrente" id="body_tarjetaFrente">
+        <img class="imagenTarjeta" src="${personaje.image}"></img> <br>
+        <h4 class="titulotarjetas">${personaje.name}</h4>
+        </div>
+        </div>
+        <div class="tarjetaAtras" id="tarjetaAtras">
+        <div class="body_tarjetaAtras" id="body_tarjetaAtras">
+        <p class="textoTarjeta">
+        Estatus: ${personaje.status} <br>
+        Especie: ${personaje.species} <br>
+        Tipo: ${personaje.type} <br>
+        Genero: ${personaje.gender} <br>
+        Origen: ${personaje.origin.name} <br>
+        Locación: ${personaje.location.name}
+        </p>
+        </div>
+        </div>
+        </div>
+        </div>
+        `
             espacioPersonajes.style.display = 'none';
         })
-    
-        } else{
+
+    } else {
         resultado.innerHTML += `
         <li>Personaje no encontrado</li>
         `
@@ -202,12 +225,20 @@ function mostrarBuscador2(texto2){
 
 //MOSTRAR TODOS LOS PERSONAJES SIN FILTRO
 function mostrarTodo() {
-    for (let todos of data.results){
+    for (let todos of data.results) {
         //console.log(todos);
         espacioPersonajes.innerHTML += `
-        <div class="tarjetaP" id="tarjetaP">
-        <img class="imagenTarjeta" src="${todos.image}"></img>
+        <div class="tarjetaP" id="tarjetaP"> 
+        <div class="cardCompleta" id="cardCompleta">
+        <div class="tarjetaFrente" id="tarjetaFrente">
+        <div class="bg"></div>
+        <div class="body_tarjetaFrente" id="body_tarjetaFrente">
+        <img class="imagenTarjeta" src="${todos.image}"></img> <br>
         <h4 class="titulotarjetas">${todos.name}</h4>
+        </div>
+        </div>
+        <div class="tarjetaAtras" id="tarjetaAtras">
+        <div class="body_tarjetaAtras" id="body_tarjetaAtras">
         <p class="textoTarjeta">
         Estatus: ${todos.status} <br>
         Especie: ${todos.species} <br>
@@ -217,59 +248,85 @@ function mostrarTodo() {
         Locación: ${todos.location.name}
         </p>
         </div>
+        </div>
+        </div>
+        </div>
         `
     }
 }
 
 
 //MOSTRAR FILTRO ABC
-function mostrarFiltrado(orden){
+function mostrarFiltrado(orden) {
     let dataFiltrado = isalfabeto();
     let dataFiltradoReverso = isalfabeto().reverse();
     espacioPersonajes.innerHTML = ""
-    if(orden === "descendente"){
-        for (let todos of dataFiltradoReverso){
+    if (orden === "descendente") {
+        for (let todos of dataFiltradoReverso) {
             espacioPersonajes.innerHTML += `
-            <div class="tarjetaP" id="tarjetaP">
-            <img class="imagenTarjeta" src="${todos.image}"></img>
-            <h4 class="titulotarjetas">${todos.name}</h4>
-            <p class="textoTarjeta">
-            Estatus: ${todos.status} <br>
-            Especie: ${todos.species} <br>
-            Tipo: ${todos.type} <br>
-            Genero: ${todos.gender} <br>
-            Origen: ${todos.origin.name} <br>
-            Locación: ${todos.location.name}
-            </p>
-            </div>
-            `  
+            <div class="tarjetaP" id="tarjetaP"> 
+        <div class="cardCompleta" id="cardCompleta">
+        <div class="tarjetaFrente" id="tarjetaFrente">
+        <div class="bg"></div>
+        <div class="body_tarjetaFrente" id="body_tarjetaFrente">
+        <img class="imagenTarjeta" src="${todos.image}"></img> <br>
+        <h4 class="titulotarjetas">${todos.name}</h4>
+        </div>
+        </div>
+        <div class="tarjetaAtras" id="tarjetaAtras">
+        <div class="body_tarjetaAtras" id="body_tarjetaAtras">
+        <p class="textoTarjeta">
+        Estatus: ${todos.status} <br>
+        Especie: ${todos.species} <br>
+        Tipo: ${todos.type} <br>
+        Genero: ${todos.gender} <br>
+        Origen: ${todos.origin.name} <br>
+        Locación: ${todos.location.name}
+        </p>
+        </div>
+        </div>
+        </div>
+        </div>
+            `
         }
     } else {
-        for (let todos of dataFiltrado){
+        for (let todos of dataFiltrado) {
             espacioPersonajes.innerHTML += `
-            <div class="tarjetaP" id="tarjetaP">
-            <img class="imagenTarjeta" src="${todos.image}"></img>
-            <h4 class="titulotarjetas">${todos.name}</h4>
-            <p class="textoTarjeta">
-            Estatus: ${todos.status} <br>
-            Especie: ${todos.species} <br>
-            Tipo: ${todos.type} <br>
-            Genero: ${todos.gender} <br>
-            Origen: ${todos.origin.name} <br>
-            Locación: ${todos.location.name}
-            </p>
-            </div>
+            <div class="tarjetaP" id="tarjetaP"> 
+        <div class="cardCompleta" id="cardCompleta">
+        <div class="tarjetaFrente" id="tarjetaFrente">
+        <div class="bg"></div>
+        <div class="body_tarjetaFrente" id="body_tarjetaFrente">
+        <img class="imagenTarjeta" src="${todos.image}"></img> <br>
+        <h4 class="titulotarjetas">${todos.name}</h4>
+        </div>
+        </div>
+        <div class="tarjetaAtras" id="tarjetaAtras">
+        <div class="body_tarjetaAtras" id="body_tarjetaAtras">
+        <p class="textoTarjeta">
+        Estatus: ${todos.status} <br>
+        Especie: ${todos.species} <br>
+        Tipo: ${todos.type} <br>
+        Genero: ${todos.gender} <br>
+        Origen: ${todos.origin.name} <br>
+        Locación: ${todos.location.name}
+        </p>
+        </div>
+        </div>
+        </div>
+        </div>
             `
         }
     }
 }
 
+
 //SELECTOR A-Z Y Z-A
 const selectorAbc = document.getElementById("selector1");
-selectorAbc.addEventListener("change", function(){
+selectorAbc.addEventListener("change", function () {
     const seleccionado = selectorAbc.value;
     console.log(selectorAbc.value);
-    if(seleccionado === "ascendente"){
+    if (seleccionado === "ascendente") {
         return mostrarFiltrado("ascendente");
     }
     if (seleccionado === "descendente") {
@@ -282,15 +339,15 @@ selectorAbc.addEventListener("change", function(){
 const grande = document.querySelector('.grande');
 const punto = document.querySelectorAll('.punto');
 
-punto.forEach( ( cadaPunto ,  i )=> {
-    punto[i].addEventListener('click',()=>{
-        
+punto.forEach((cadaPunto, i) => {
+    punto[i].addEventListener('click', () => {
+
         let posicion = i
         let operacion = posicion * -22
 
-        grande.style.transform = `translateX(${ operacion}%)`
+        grande.style.transform = `translateX(${operacion}%)`
 
-        punto.forEach( (cadaPunto , i )=>{
+        punto.forEach((cadaPunto, i) => {
             punto[i].classList.remove('activo')
         })
         punto[i].classList.add('activo')
@@ -301,52 +358,69 @@ punto.forEach( ( cadaPunto ,  i )=> {
 //FILTRA PERSONAJES POR MULTIVERSOS
 const tarjetamultiverso = document.querySelectorAll(".tarjetamultiverso");
 const personajesmulti = document.getElementById("personajesMulti")
-  
-  tarjetamultiverso.forEach(element => {
-    element.addEventListener('click', function(e){
-      let origen1 = e.target.alt;
-      personajesmulti.innerHTML = ""
-      const personajesFiltrados = filtrarorigen(data, origen1);
-      personajesFiltrados.forEach(personaje => {
-        personajesmulti.innerHTML += `
-        <div class="tarjetaP" id="tarjetaP">
-        <img class="imagenTarjeta" src="${personaje.image}"></img>
-        <h4 class="titulotarjetas">${personaje.name}</h4>
-        <p class="textoTarjeta">
-        Estatus: ${personaje.status} <br>
-        Especie: ${personaje.species} <br>
-        Tipo: ${personaje.type} <br>
-        Genero: ${personaje.gender} <br>
-        Origen: ${personaje.origin.name} <br>
-        Locación: ${personaje.location.name}
-        </p>
-        </div>
+
+tarjetamultiverso.forEach(element => {
+    element.addEventListener('click', function (e) {
+        let origen1 = e.target.alt;
+        personajesmulti.innerHTML = ""
+        const personajesFiltrados = filtrarorigen(data, origen1);
+        personajesFiltrados.forEach(personaje => {
+            personajesmulti.innerHTML += `
+            <div class="tarjetaP" id="tarjetaP"> 
+            <div class="cardCompleta" id="cardCompleta">
+            <div class="tarjetaFrente" id="tarjetaFrente">
+            <div class="bg"></div>
+            <div class="body_tarjetaFrente" id="body_tarjetaFrente">
+            <img class="imagenTarjeta" src="${personaje.image}"></img> <br>
+            <h4 class="titulotarjetas">${personaje.name}</h4>
+            </div>
+            </div>
+            <div class="tarjetaAtras" id="tarjetaAtras">
+            <div class="body_tarjetaAtras" id="body_tarjetaAtras">
+            <p class="textoTarjeta">
+            Estatus: ${personaje.status} <br>
+            Especie: ${personaje.species} <br>
+            Tipo: ${personaje.type} <br>
+            Genero: ${personaje.gender} <br>
+            Origen: ${personaje.origin.name} <br>
+            Locación: ${personaje.location.name}
+            </p>
+            </div>
+            </div>
+            </div>
+            </div>
         `
-      });
+        });
     });
-  });
-  
+});
 
 
-
-//ESTE MUESTRA LOS EPISODIOS POR PERSONAJE
+//MUESTRA LOS EPISODIOS POR PERSONAJE
 function mostrarEpisodios(data) {
     const tarjetasEpisodios = document.getElementById("tarjetasEpisodios");
 
     data.forEach((personaje) => {
     tarjetasEpisodios.innerHTML += `
-    <div class="tarjetaP" id="tarjetaP">
-    <img class="imagenTarjeta" src="${personaje.imagen}"></img>
-    <h4 class="titulotarjetas">${personaje.nombre}</h4>,
+    <div class="tarjetaP" id="tarjetaP"> 
+    <div class="cardCompleta" id="cardCompleta">
+    <div class="tarjetaFrente" id="tarjetaFrente">
+    <div class="bg"></div>
+    <div class="body_tarjetaFrente" id="body_tarjetaFrente">
+    <img class="imagenTarjeta" src="${personaje.imagen}"></img> <br>
+    <h4 class="titulotarjetasEpisodios">${personaje.nombre}</h4> 
+    </div>
+    </div>
+    <div class="tarjetaAtras" id="tarjetaAtras">
+    <div class="body_tarjetaAtras" id="body_tarjetaAtras">
     <p class="textotarjetaepisodios">
     Apariciones en la serie:
     ${personaje.apariciones}
     </p>
-    <p class="textoTarjeta"> 
-    ${personaje.episodio}</p>
-    </div>`
+    </div>
+    </div>
+    </div>
+    </div>
+    `
     });
-  }
+}
 
-
-  

@@ -1,4 +1,5 @@
-import { example, anotherExample } from '../src/data.js';
+import data from './data/rickandmorty/rickandmorty.js';
+import { filtrar1, filtrar2, isalfabeto, filtrarorigen, episodiosTotal } from '../src/data.js';
 
 
 describe('example', () => {

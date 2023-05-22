@@ -1,13 +1,13 @@
-import data from './data/rickandmorty/rickandmorty.js';
-import { filtrar1, filtrar2, isalfabeto, filtrarorigen, episodiosTotal } from '../src/data.js';
+/*import data from './data/rickandmorty/rickandmorty.js';*/
+import { filtrar1, /*filtrar2, isalfabeto, filtrarorigen, episodiosTotal*/ } from '../src/data.js';
 
 
-describe('example', () => {
+describe('filtar1', () => {
   it('is a function', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof filtrar1).toBe('function');
   });
-
-  it('returns `example`', () => {
+});
+/*it('returns `example`', () => {
     expect(example()).toBe('example');
   });
 });
@@ -22,3 +22,4 @@ describe('anotherExample', () => {
     expect(anotherExample()).toBe('OMG');
   });
 });
+*/

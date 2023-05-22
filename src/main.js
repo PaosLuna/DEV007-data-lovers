@@ -25,76 +25,75 @@ header2.style.display = 'none';
 
 //INTERACCIÓN BOTONES HEADER 
 headerInicio.addEventListener("click", () => {
-    cerrarSeccion2()
-    cerrarSeccion3()
-    cerrarSeccion4()
+  cerrarSeccion2()
+  cerrarSeccion3()
+  cerrarSeccion4()
 });
 headerPersonajes.addEventListener("click", () => {
-    cerrarSeccion3()
-    cerrarSeccion1()
+  cerrarSeccion3()
+  cerrarSeccion1()
 });
 headerMultiversos.addEventListener("click", () => {
-    abrirSeccion3()
+  abrirSeccion3()
 });
 headerEpisodios.addEventListener("click", () => {
-    abrirSeccion4()
-    mostrarEpisodios(episodiosTotal)
+  abrirSeccion4()
+  mostrarEpisodios(episodiosTotal)
 });
 //TERMINA INTERACCIÓN BOTONES HEADER 
 
 
 function cerrarSeccion1() {
-    seccion1.style.display = 'none';
-    seccion2.style.display = 'block';
-    seccion3.style.display = 'none';
-    seccion4.style.display = 'none';
-    header2.style.display = 'block';
-    header1.style.display = 'none';
+  seccion1.style.display = 'none';
+  seccion2.style.display = 'block';
+  seccion3.style.display = 'none';
+  seccion4.style.display = 'none'; 
+  header2.style.display = 'block';
+  header1.style.display = 'none';
 }
 
 function cerrarSeccion2() {
-    seccion2.style.display = 'none';
-    seccion1.style.display = 'flex';
-    seccion3.style.display = 'none';
-    seccion4.style.display = 'none';
-    header1.style.display = 'flex';
-    header2.style.display = 'none';
+  seccion2.style.display = 'none';
+  seccion1.style.display = 'flex';
+  seccion3.style.display = 'none';
+  seccion4.style.display = 'none';
+  header1.style.display = 'flex';
+  header2.style.display = 'none';
 }
 
 function abrirSeccion3() {
-    seccion1.style.display = 'none';
-    seccion2.style.display = 'none';
-    seccion3.style.display = 'block';
-    seccion4.style.display = 'none';
-    header2.style.display = 'block';
-    header1.style.display = 'none';
-
+  seccion1.style.display = 'none';
+  seccion2.style.display = 'none';
+  seccion3.style.display = 'block';
+  seccion4.style.display = 'none';
+  header2.style.display = 'block';
+  header1.style.display = 'none';
 }
 
 function cerrarSeccion3() {
-    seccion2.style.display = 'none';
-    seccion1.style.display = 'flex';
-    seccion3.style.display = 'none';
-    header1.style.display = 'flex';
-    header2.style.display = 'none';
+  seccion2.style.display = 'none';
+  seccion1.style.display = 'flex';
+  seccion3.style.display = 'none';
+  header1.style.display = 'flex';
+  header2.style.display = 'none';
 }
 
 function abrirSeccion4() {
-    seccion1.style.display = 'none';
-    seccion2.style.display = 'none';
-    seccion3.style.display = 'none';
-    seccion4.style.display = 'block';
-    header2.style.display = 'block';
-    header1.style.display = 'none';
+  seccion1.style.display = 'none';
+  seccion2.style.display = 'none';
+  seccion3.style.display = 'none';
+  seccion4.style.display = 'block';
+  header2.style.display = 'block';
+  header1.style.display = 'none';
 }
 
 function cerrarSeccion4() {
-    seccion2.style.display = 'none';
-    seccion1.style.display = 'flex';
-    seccion3.style.display = 'none';
-    seccion4.style.display = 'none';
-    header1.style.display = 'flex';
-    header2.style.display = 'none';
+  seccion2.style.display = 'none';
+  seccion1.style.display = 'flex';
+  seccion3.style.display = 'none';
+  seccion4.style.display = 'none';
+  header1.style.display = 'flex';
+  header2.style.display = 'none';
 }
 
 /*----------------------------------------------------AQUÍ TERMINA MANEJO DE SECCIONES-------------------------------------------------*/
@@ -102,16 +101,16 @@ function cerrarSeccion4() {
 //CIERRA SECCIÓN 1 Y ABRE LA 2
 const botonTodos = document.getElementById("botonTodos");
 botonTodos.addEventListener("click", () => {
-    cerrarSeccion1();
-    mostrarTodo();
+  cerrarSeccion1();
+  mostrarTodo();
 });
 
 //CIERRA SECCIÓN 1 Y ABRE LA 3
 const botonMultiversos = document.getElementById("botonMultiversos");
 botonMultiversos.addEventListener("click", () => {
-    abrirSeccion3();
-    mostrarTodo();
-    //mostrarFiltrado2();
+  abrirSeccion3();
+  mostrarTodo();
+  //mostrarFiltrado2();
 });
 
 /*----------------------------------------------------AQUÍ EMPIEZA MANEJO BUSCADORES-----------------------------------------------*/
@@ -126,27 +125,27 @@ const botonBuscar = document.getElementById("botonBuscar");/*SECCIÓN-1*/
 const botonBuscador = document.getElementById("botonBuscador");/*SECCIÓN-2*/
 const buscadorDos = document.getElementById("buscadorDos");
 
-botonBuscar.addEventListener("click", event => { /*SECCIÓN-1*/
-    resultado.innerHTML = '';
-    const texto1 = buscador1.value.toLowerCase();
-    buscador1.value = '';
-    cerrarSeccion1();
-    mostrarBuscador(texto1)
+botonBuscar.addEventListener("click", () => { /*SECCIÓN-1*/
+  resultado.innerHTML = '';
+  const texto1 = buscador1.value.toLowerCase();
+  buscador1.value = '';
+  cerrarSeccion1();
+  mostrarBuscador(texto1)
 })
 
 botonBuscador.addEventListener("click", () => { /*SECCIÓN-2*/
-    resultado.innerHTML = '';
-    const texto2 = buscadorDos.value.toLowerCase();
-    mostrarBuscador2(texto2)
-    buscadorDos.value = '';
+  resultado.innerHTML = '';
+  const texto2 = buscadorDos.value.toLowerCase();
+  mostrarBuscador2(texto2)
+  buscadorDos.value = '';
 })
 
 function mostrarBuscador(texto1) { /*SECCIÓN-1*/
-    resultado.innerHTML = '';
-    let personajes = filtrar1(texto1);
-    if (personajes.length > 0) {
-        personajes.forEach(personaje => {
-            resultado.innerHTML += `
+  resultado.innerHTML = '';
+  const personajes = filtrar1(texto1);
+  if (personajes.length > 0) {
+    personajes.forEach(personaje => {
+      resultado.innerHTML += `
         <div class="tarjetaP" id="tarjetaP"> 
         <div class="cardCompleta" id="cardCompleta">
         <div class="tarjetaFrente" id="tarjetaFrente">
@@ -171,21 +170,20 @@ function mostrarBuscador(texto1) { /*SECCIÓN-1*/
         </div>
         </div>
         `
-            espacioPersonajes.style.display = 'none'
-        })
-
-    } else {
-        resultado.innerHTML += `
+      espacioPersonajes.style.display = 'none'
+    })
+  } else {
+    resultado.innerHTML += `
         <li>Personaje no encontrado</li>
         `
-    }
+  }
 }
 
 function mostrarBuscador2(texto2) { /*SECCIÓN-2*/
-    let personajes = filtrar2(texto2);
-    if (personajes.length > 0) {
-        personajes.forEach(personaje => {
-            resultado.innerHTML += `
+  const personajes = filtrar2(texto2);
+  if (personajes.length > 0) {
+    personajes.forEach(personaje => {
+      resultado.innerHTML += `
         <div class="tarjetaP" id="tarjetaP"> 
         <div class="cardCompleta" id="cardCompleta">
         <div class="tarjetaFrente" id="tarjetaFrente">
@@ -210,14 +208,14 @@ function mostrarBuscador2(texto2) { /*SECCIÓN-2*/
         </div>
         </div>
         `
-            espacioPersonajes.style.display = 'none';
-        })
+      espacioPersonajes.style.display = 'none';
+    })
 
-    } else {
-        resultado.innerHTML += `
+  } else {
+    resultado.innerHTML += `
         <li>Personaje no encontrado</li>
         `
-    }
+  }
 }
 
 /*----------------------------------------------------AQUÍ TERMINA MANEJO BUSCADORES-----------------------------------------------*/
@@ -225,9 +223,9 @@ function mostrarBuscador2(texto2) { /*SECCIÓN-2*/
 
 //MOSTRAR TODOS LOS PERSONAJES SIN FILTRO
 function mostrarTodo() {
-    for (let todos of data.results) {
-        //console.log(todos);
-        espacioPersonajes.innerHTML += `
+  for (const todos of data.results) {
+    //console.log(todos);
+    espacioPersonajes.innerHTML += `
         <div class="tarjetaP" id="tarjetaP"> 
         <div class="cardCompleta" id="cardCompleta">
         <div class="tarjetaFrente" id="tarjetaFrente">
@@ -252,18 +250,18 @@ function mostrarTodo() {
         </div>
         </div>
         `
-    }
+  }
 }
 
 
 //MOSTRAR FILTRO ABC
 function mostrarFiltrado(orden) {
-    let dataFiltrado = isalfabeto();
-    let dataFiltradoReverso = isalfabeto().reverse();
-    espacioPersonajes.innerHTML = ""
-    if (orden === "descendente") {
-        for (let todos of dataFiltradoReverso) {
-            espacioPersonajes.innerHTML += `
+  const dataFiltrado = isalfabeto();
+  const dataFiltradoReverso = isalfabeto().reverse();
+  espacioPersonajes.innerHTML = ""
+  if (orden === "descendente") {
+    for (const todos of dataFiltradoReverso) {
+      espacioPersonajes.innerHTML += `
             <div class="tarjetaP" id="tarjetaP"> 
         <div class="cardCompleta" id="cardCompleta">
         <div class="tarjetaFrente" id="tarjetaFrente">
@@ -288,50 +286,50 @@ function mostrarFiltrado(orden) {
         </div>
         </div>
             `
-        }
-    } else {
-        for (let todos of dataFiltrado) {
-            espacioPersonajes.innerHTML += `
-            <div class="tarjetaP" id="tarjetaP"> 
-        <div class="cardCompleta" id="cardCompleta">
-        <div class="tarjetaFrente" id="tarjetaFrente">
-        <div class="bg"></div>
-        <div class="body_tarjetaFrente" id="body_tarjetaFrente">
-        <img class="imagenTarjeta" src="${todos.image}"></img> <br>
-        <h4 class="titulotarjetas">${todos.name}</h4>
-        </div>
-        </div>
-        <div class="tarjetaAtras" id="tarjetaAtras">
-        <div class="body_tarjetaAtras" id="body_tarjetaAtras">
-        <p class="textoTarjeta">
-        Estatus: ${todos.status} <br>
-        Especie: ${todos.species} <br>
-        Tipo: ${todos.type} <br>
-        Genero: ${todos.gender} <br>
-        Origen: ${todos.origin.name} <br>
-        Locación: ${todos.location.name}
-        </p>
-        </div>
-        </div>
-        </div>
-        </div>
-            `
-        }
     }
+  } else {
+    for (const todos of dataFiltrado) {
+      espacioPersonajes.innerHTML += `
+            <div class="tarjetaP" id="tarjetaP"> 
+        <div class="cardCompleta" id="cardCompleta">
+        <div class="tarjetaFrente" id="tarjetaFrente">
+        <div class="bg"></div>
+        <div class="body_tarjetaFrente" id="body_tarjetaFrente">
+        <img class="imagenTarjeta" src="${todos.image}"></img> <br>
+        <h4 class="titulotarjetas">${todos.name}</h4>
+        </div>
+        </div>
+        <div class="tarjetaAtras" id="tarjetaAtras">
+        <div class="body_tarjetaAtras" id="body_tarjetaAtras">
+        <p class="textoTarjeta">
+        Estatus: ${todos.status} <br>
+        Especie: ${todos.species} <br>
+        Tipo: ${todos.type} <br>
+        Genero: ${todos.gender} <br>
+        Origen: ${todos.origin.name} <br>
+        Locación: ${todos.location.name}
+        </p>
+        </div>
+        </div>
+        </div>
+        </div>
+            `
+    }
+  }
 }
 
 
 //SELECTOR A-Z Y Z-A
 const selectorAbc = document.getElementById("selector1");
 selectorAbc.addEventListener("change", function () {
-    const seleccionado = selectorAbc.value;
-    console.log(selectorAbc.value);
-    if (seleccionado === "ascendente") {
-        return mostrarFiltrado("ascendente");
-    }
-    if (seleccionado === "descendente") {
-        return mostrarFiltrado("descendente");
-    }
+  const seleccionado = selectorAbc.value;
+  console.log(selectorAbc.value);
+  if (seleccionado === "ascendente") {
+    return mostrarFiltrado("ascendente");
+  }
+  if (seleccionado === "descendente") {
+    return mostrarFiltrado("descendente");
+  }
 });
 
 
@@ -340,18 +338,18 @@ const grande = document.querySelector('.grande');
 const punto = document.querySelectorAll('.punto');
 
 punto.forEach((cadaPunto, i) => {
-    punto[i].addEventListener('click', () => {
+  punto[i].addEventListener('click', () => {
 
-        let posicion = i
-        let operacion = posicion * -22
+    const posicion = i
+    const operacion = posicion * -22
 
-        grande.style.transform = `translateX(${operacion}%)`
+    grande.style.transform = `translateX(${operacion}%)`
 
-        punto.forEach((cadaPunto, i) => {
-            punto[i].classList.remove('activo')
-        })
-        punto[i].classList.add('activo')
+    punto.forEach((cadaPunto, i) => {
+      punto[i].classList.remove('activo')
     })
+    punto[i].classList.add('activo')
+  })
 })
 
 
@@ -360,12 +358,12 @@ const tarjetamultiverso = document.querySelectorAll(".tarjetamultiverso");
 const personajesmulti = document.getElementById("personajesMulti")
 
 tarjetamultiverso.forEach(element => {
-    element.addEventListener('click', function (e) {
-        let origen1 = e.target.alt;
-        personajesmulti.innerHTML = ""
-        const personajesFiltrados = filtrarorigen(data, origen1);
-        personajesFiltrados.forEach(personaje => {
-            personajesmulti.innerHTML += `
+  element.addEventListener('click', function (e) {
+    const origen1 = e.target.alt;
+    personajesmulti.innerHTML = ""
+    const personajesFiltrados = filtrarorigen(data, origen1);
+    personajesFiltrados.forEach(personaje => {
+      personajesmulti.innerHTML += `
             <div class="tarjetaP" id="tarjetaP"> 
             <div class="cardCompleta" id="cardCompleta">
             <div class="tarjetaFrente" id="tarjetaFrente">
@@ -390,16 +388,16 @@ tarjetamultiverso.forEach(element => {
             </div>
             </div>
         `
-        });
     });
+  });
 });
 
 
 //MUESTRA LOS EPISODIOS POR PERSONAJE
 function mostrarEpisodios(data) {
-    const tarjetasEpisodios = document.getElementById("tarjetasEpisodios");
+  const tarjetasEpisodios = document.getElementById("tarjetasEpisodios");
 
-    data.forEach((personaje) => {
+  data.forEach((personaje) => {
     tarjetasEpisodios.innerHTML += `
     <div class="tarjetaP" id="tarjetaP"> 
     <div class="cardCompleta" id="cardCompleta">
@@ -421,6 +419,6 @@ function mostrarEpisodios(data) {
     </div>
     </div>
     `
-    });
+  });
 }
 

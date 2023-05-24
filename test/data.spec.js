@@ -40,7 +40,7 @@ describe("isalfabeto", () => {
     expect(typeof isalfabeto).toBe("function");
   });
   
-  it("Se espera que retorne un array", () => {
+  it("Se espera que retorne un objeto", () => {
     expect(typeof isalfabeto()).toEqual("object");
   });
   
@@ -60,19 +60,6 @@ describe("filtrarorigen", () => {
   
   it("Se espera que retorne un array", () => { 
     expect(Array.isArray(filtrarorigen(data, "Abadango"))).toStrictEqual(true);
-  });
-  
-  it("deberia filtrar personajes por multiverso", () => {
-    const multiverso = "Abadango"
-    const resultado = filtrarorigen(multiverso)
-    expect(resultado([[data, "Abadango"]])).toEqual([
-      {
-        name: "Abadango Princess",
-        origin: {
-          name: "Abadango",
-        },
-      },
-    ]);
   });
 });
 

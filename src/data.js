@@ -51,6 +51,9 @@ function filtrarorigen(data, origen) {
   })
 }
 
+console.log(filtrarorigen(data, "Rick Sanchez"));
+
+
 
 //FILTRA EPISODIOS POR PERSONAJE
 const episodiosTotal = data.results.map(function (personaje) {

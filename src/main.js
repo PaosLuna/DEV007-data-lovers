@@ -32,6 +32,7 @@ headerInicio.addEventListener("click", () => {
 headerPersonajes.addEventListener("click", () => {
   cerrarSeccion3()
   cerrarSeccion1()
+  /*window.location.reload()*/
 });
 headerMultiversos.addEventListener("click", () => {
   abrirSeccion3()
@@ -110,7 +111,6 @@ const botonMultiversos = document.getElementById("botonMultiversos");
 botonMultiversos.addEventListener("click", () => {
   abrirSeccion3();
   mostrarTodo();
-  //mostrarFiltrado2();
 });
 
 /*----------------------------------------------------AQUÍ EMPIEZA MANEJO BUSCADORES-----------------------------------------------*/
@@ -224,7 +224,6 @@ function mostrarBuscador2(texto2) { /*SECCIÓN-2*/
 //MOSTRAR TODOS LOS PERSONAJES SIN FILTRO
 function mostrarTodo() {
   for (const todos of data.results) {
-    //console.log(todos);
     espacioPersonajes.innerHTML += `
         <div class="tarjetaP" id="tarjetaP"> 
         <div class="cardCompleta" id="cardCompleta">

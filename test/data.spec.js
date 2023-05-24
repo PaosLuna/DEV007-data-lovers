@@ -1,4 +1,4 @@
-/*import data from '../src/data/rickandmorty/rickandmorty';*/
+import data from '../src/data/rickandmorty/rickandmorty';
 import { filtrar1, filtrar2, isalfabeto, filtrarorigen, episodiosTotal } from "../src/data.js";
 
 describe("filtar1", () => {
@@ -12,6 +12,10 @@ describe("filtar1", () => {
   it("filtrar por Bepisian", () => {
     const bepisian = filtrar1("bepisian");
     expect(bepisian.length).toBe(1);
+  });
+  it("filtrar por Rick", () => {
+    const rick = filtrar1("rick");
+    expect(rick.length).toBe(13);
   });
 });
 
@@ -35,9 +39,11 @@ describe("isalfabeto", () => {
   it("is a function", () => {
     expect(typeof isalfabeto).toBe("function");
   });
+  
   it("Se espera que retorne un array", () => {
     expect(typeof isalfabeto()).toEqual("object");
   });
+  
   it("Devuelve el primer personaje", () => {
     const letra = "A";
     const data = isalfabeto(letra);
@@ -52,8 +58,11 @@ describe("filtrarorigen", () => {
     expect(typeof filtrarorigen).toBe("function");
   });
   
+  it("Se espera que retorne un array", () => { 
+    expect(Array.isArray(filtrarorigen(data, "Abadango"))).toStrictEqual(true);
+  });
   
-  /*it("deberia filtrar personajes por multiverso", () => {
+  it("deberia filtrar personajes por multiverso", () => {
     const multiverso = "Abadango"
     const resultado = filtrarorigen(multiverso)
     expect(resultado([[data, "Abadango"]])).toEqual([
@@ -64,7 +73,7 @@ describe("filtrarorigen", () => {
         },
       },
     ]);
-  });*/
+  });
 });
 
 

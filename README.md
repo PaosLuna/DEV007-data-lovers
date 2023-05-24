@@ -6,11 +6,9 @@
 * [2. Diseño UX](#2-diseño-ux)
 * [3. Historias de usuario](#3-historias-de-usuario)
 * [4. Página finalizada](#4-pagina-finalizada)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Hacker edition](#6-hacker-edition)
-* [7. Consideraciones técnicas](#7-consideraciones-técnicas)
-* [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
-* [9. Checklist](#9-checklist)
+* [5. Test](#5-test)
+* [6. Flujo de trabajo](#6-flujo-de-trabajo)
+* [7. Fuentes consultadas](#7-fuentes-consultadas)
 
 ***
 

@@ -132,7 +132,7 @@ Se crearon 13 test para verificar el correcto funcionamiento de la página.
 
 El tiempo para desarrollar este proyecto fue de 4 strings, durante esos strings seguímos el siguiente flujo de trabajo usando Trello para la organización. 
 
-![Flujo de trabajo](https://github.com/PaosLuna/DEV007-data-lovers/blob/d4fc6810c5c96f2ef587a07965ba1f419ccdc5c0/src/imagenes/Trello.png)
+![Flujo de trabajo](https://github.com/PaosLuna/DEV007-data-lovers/blob/62ba85deb97476daf356f0c2ca048e3022eecfd7/src/imagenes/Trello.png)
 
 ## 7. Fuentes consultadas
 

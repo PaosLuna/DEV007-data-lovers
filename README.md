@@ -2,8 +2,8 @@
 
 ## Índice
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
+* [1. Producto](#1-producto)
+* [2. Diseño UX](#2-diseño-ux)
 * [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
 * [4. Consideraciones generales](#4-consideraciones-generales)
 * [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
@@ -14,76 +14,42 @@
 
 ***
 
-## 1. Preámbulo
+## 1. Producto
 
-Según [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read),
-el 90% de la data que existe hoy ha sido creada durante los últimos dos años.
-Cada día generamos 2.5 millones de terabytes de datos, una cifra sin
-precedentes.
+El producto es una página web dirigida seguidores de la serie **Rick and Morty**, cuya finalidad es poder mostrar de manera simple y dinámica 
+información acerca de los multiples personajes que aparecen a lo largo de las 3 temporadas de la producción.
 
-No obstante, los datos por sí mismos son de poca utilidad. Para que esas
-grandes cantidades de datos se conviertan en **información** fácil de leer para
-los usuarios, necesitamos entender y procesar estos datos. Una manera simple de
-hacerlo es creando _interfaces_ y _visualizaciones_.
+**Rick and Morty** es una serie de televisión estadounidense de animación para adultos creada por **Justin Roiland** y **Dan Harmon** en 2013 para **Adult Swim**. 
+La serie sigue las desventuras del científico **Rick Sanchez**, y su nieto fácilmente influenciable: **Morty**, quienes pasan el tiempo entre viajes espaciales, 
+temporales e intergalácticos.
 
-En la siguiente imagen, podrás ver cómo con la data que que se ve en la parte
-izquierda se puede construir una interfaz amigable y entendible por las
-usuarias, al lado derecho.
+![rick-and-morty](https://github.com/PaosLuna/DEV007-data-lovers/blob/0ce85ba023ced0f8a4e1674fcdb13156bc65eaee/src/imagenes/Readme1.jpeg)
 
-![pokemon-data-to-ui](https://user-images.githubusercontent.com/12631491/218505816-c6d11758-9de4-428f-affb-2a56ea4d68c4.png)
+## 2. Diseño UX
 
-## 2. Resumen del proyecto
+### Target
 
-En este proyecto **construirás una _página web_ para visualizar un
-_conjunto (set) de datos_** que se adecúe a lo que descubras que tu usuario
-necesita.
+La página está enfocada a los fans de **Rick and Morty**, quienes a través de esta tendrán acceso a información de los personajes de manera ordenada, filtrada por
+multiversos, así como conocer en cuántos capítulos aparecen a lo largo de las 3 temporadas. 
 
-Como entregable final tendrás una página web que permita **visualizar la data,
-filtrarla, ordenarla y hacer algún cálculo agregado**. Con cálculo agregado
-nos referimos a distintos cálculos que puedes hacer con la data para mostrar
-información aún más relevante para los usuarios (promedio, el valor máximo
-o mínimo, etc).
+### Diseño
 
-Esta vez te proponemos una serie de datos de diferentes _temáticas_ para que
-explores y decidas con qué temática te interesa trabajar. Hemos elegido
-específicamente estos sets de datos porque creemos que se adecúan bien a esta
-etapa de tu aprendizaje.
+El diseño esta basado en los colores **LightGreen**, **DeepSkyBlue** y **Black** , colores distintivos de **Rick and Morty**. Se buscó un diseño minimalista en la 
+interfaz ya que los personajes por si solos son demasiado coloridos y extravagantes, así evitamos saturar al usuario. Sin embargo, se agregarón animaciones a las tarjetas
+botones para hacer más dinámica la pantalla. 
 
-Una vez que definas tu área de interés, buscar entender quién es tu usuario
-y qué necesita saber o ver exactamente; luego podrás construir la interfaz que
-le ayude a interactuar y entender mejor esos datos.
+### Prototipo
 
-Estos son datos que te proponemos:
+Se realizaron dos prototipos, uno de alta fidelidad en Canva:
 
-* [Pokémon](src/data/pokemon/pokemon.json):
-  En este set encontrarás una lista con los 251 Pokémon de la región de Kanto
-  y Johto, junto con sus respectivas estadísticas usadas en el juego
-  [Pokémon GO](http://pokemongolive.com).
-  - [Investigación con jugadores de Pokémon Go](src/data/pokemon/README.md)
+![prototipo-baja1](https://github.com/PaosLuna/DEV007-data-lovers/blob/0ce85ba023ced0f8a4e1674fcdb13156bc65eaee/src/imagenes/PrototipoBaja1.jpg)
 
-* [League of Legends - Challenger leaderboard](src/data/lol/lol.json):
-  Este set de datos muestra la lista de campeones en una liga del
-  juego League of Legends (LoL).
-  - [Investigación con jugadores de LoL](src/data/lol/README.md)
+![prototipo-baja2](https://github.com/PaosLuna/DEV007-data-lovers/blob/0ce85ba023ced0f8a4e1674fcdb13156bc65eaee/src/imagenes/PrototipoBaja2.jpg)
 
-* [Rick and Morty](src/data/rickandmorty/rickandmorty.json).
-  Este set nos proporciona la lista de los personajes de la serie Rick and
-  Morty. [API Rick and Morty](https://rickandmortyapi.com).
-  - [Investigación con seguidores de Rick and Morty](src/data/rickandmorty/README.md)
+Así como nuestro prototipo de alta fidelidad realizado en Figma. 
 
-* [Juegos Olímpicos de Río de Janeiro](src/data/athletes/athletes.json).
-  Este set nos proporciona la lista de los atletas que ganaron medallas en las
-  olímpiadas de Río de Janeiro.
-  - [Investigación con interesados en juegos olímpicos de Río de Janeiro](src/data/athletes/README.md)
 
-* [Studio Ghibli](src/data/ghibli/ghibli.json).
-  En este set encontrarás una lista de las animaciones y sus personajes del
-  [Studio Ghibli](https://ghiblicollection.com/).
-  - [Investigación con seguidores de las animaciones del Studio Ghibli](src/data/ghibli/README.md)
 
-El objetivo principal de este proyecto es que aprendas a diseñar y construir una
-interfaz web donde se pueda visualizar y manipular data, entendiendo lo que el
-usuario necesita.
 
 ## 3. Objetivos de aprendizaje
 
